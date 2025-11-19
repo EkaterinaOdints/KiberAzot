@@ -11,19 +11,42 @@
     <link rel="preload" href="./fonts/VictorMono-Regular.woff2" as="font" crossorigin="anonymous" />
     <link rel="preload" href="./fonts/VictorMono-Bold.woff" as="font" crossorigin="anonymous" />
     <link rel="preload" href="./fonts/VictorMono-Bold.woff2" as="font" crossorigin="anonymous" />
-    <!-- <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
-    <link rel="shortcut icon" href="./favicon/favicon.ico" /> -->
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
   </head>
 
   <body>
-    <header></header>
-    <main>
-      <!-- <img src="./img/placeholder@1x.png" alt="123" /> -->
-      <!-- <svg width="17" height="16">
-        <use href="./img/sprite.svg#smile"></use>
-      </svg> -->
-    </main>
+    <header class="header" data-js-header>
+      <div class="header__container container">
+        <div class="header__wrapper">
+          <div class="header__logo logo">
+            <img src="./img/logo.svg" width="145" height="35" alt="Логотип компании" />
+          </div>
+          <nav class="header__nav nav" data-js-menu>
+            <a class="nav__link" href="#">Каталог</a>
+            <a class="nav__link" href="#">О компании</a>
+            <a class="nav__link" href="#">Доставка</a>
+            <a class="nav__link" href="#">Закон</a>
+            <a class="nav__link" href="#">Опт</a>
+            <a class="nav__link" href="#">Контакты</a>
+            <a class="nav__link" href="#">Блог</a>
+          </nav>
+          <a class="header__phone phone" href="tel:+79654493111">
+            <div class="phone__icon">
+              <svg width="24" height="24">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <span class="phone__text">+7 965 449-31-11</span>
+          </a>
+          <button class="header__nav-button" type="button" data-js-menu-button>
+            <div class="header__nav-button-item"></div>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main></main>
     <footer></footer>
     <script type="module" src="./main.js"></script>
   </body>

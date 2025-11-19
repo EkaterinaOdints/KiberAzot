@@ -2,4 +2,7 @@
 @use "./common/fonts";
 @use "./common/global";
 
+@use "./blocks/container";
+@use "./blocks/nav";
+@use "./blocks/phone";
 @use "./blocks/header";

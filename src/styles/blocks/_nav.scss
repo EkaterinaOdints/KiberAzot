@@ -1,0 +1,26 @@
+@use "../common/variables" as *;
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  column-gap: 4px;
+  row-gap: 9px;
+
+  &__link {
+    padding: 5px 13px;
+    color: currentColor;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 1px solid $color-default-white;
+    border-radius: 70px;
+    box-shadow: -1px 2px 0 $color-default-white;
+    background-color: $color-default-black;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $color-accent-second;
+    }
+  }
+}

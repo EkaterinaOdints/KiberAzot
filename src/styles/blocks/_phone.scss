@@ -1,0 +1,26 @@
+.phone {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: currentColor;
+  font-size: 18px;
+  line-height: 100%;
+  text-decoration: none;
+
+  &__icon {
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+  }
+
+  @media (max-width: 768px) {
+    &__icon {
+      display: none;
+    }
+  }
+
+  @media (max-width: 425px) {
+    font-size: 16px;
+    line-height: 100%;
+  }
+}
