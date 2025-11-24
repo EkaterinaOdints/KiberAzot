@@ -1,0 +1,44 @@
+@use "../../common/variables" as *;
+
+.button {
+  display: block;
+  padding: 18px 32px;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Opsilon", "Arial", sans-serif;
+  font-size: 32px;
+  line-height: 120%;
+  transition: background-color 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-accent-second;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 28px;
+    padding: 15px 25px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 26px;
+    padding: 10px 20px;
+  }
+}
+
+.button--dark {
+  color: $color-default-white;
+  border: 1px solid $color-default-white;
+  background-color: $color-default-black;
+  box-shadow: -5px 9px 0 $color-default-white;
+  border-radius: 80px;
+}
+
+.button--light {
+  color: $color-default-black;
+  border: 1px solid $color-default-black;
+  background-color: $color-default-white;
+  box-shadow: -5px 9px 0 $color-default-black;
+  border-radius: 80px;
+}

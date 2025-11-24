@@ -1,4 +1,4 @@
-@use "../common/variables" as *;
+@use "../../common/variables" as *;
 
 .header {
   position: relative;
@@ -181,6 +181,14 @@
       bottom: 50%;
       transform: translateY(50%) rotate(-45deg);
       transition: bottom 0.3s, transform 0.3s 0.3s;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .header__nav {
+      .nav__link {
+        text-align: end;
+      }
     }
   }
 

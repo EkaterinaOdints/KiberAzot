@@ -1,4 +1,4 @@
-@use "../common/variables" as *;
+@use "../../common/variables" as *;
 
 .hero {
   position: relative;
@@ -222,9 +222,10 @@
 
     &__subtitle {
       padding: 25px 20px;
-      width: 70%;
+      width: 85%;
       left: 70px;
       top: 7px;
+      font-size: 3vw;
 
       &::after {
         right: -2px;
@@ -253,7 +254,7 @@
         position: static;
         width: 100%;
         background-color: $color-accent-main;
-        padding: 0 20px 10px;
+        padding: 0 20px 30px;
       }
 
       &__image {

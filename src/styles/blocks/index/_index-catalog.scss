@@ -1,0 +1,95 @@
+@use "../../common/variables" as *;
+
+.index-catalog {
+  position: relative;
+  margin-top: -1px;
+  background-color: $color-accent-main;
+  color: $color-default-black;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../img/index/bottles/bottles-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding: 214px 0 112px;
+  }
+
+  &__title {
+    position: absolute;
+    top: 28px;
+    left: -95px;
+    margin: 0;
+    max-width: 620px;
+    padding: 50px 54px 50px 94px;
+    background-color: $color-default-white;
+    border-radius: 50%;
+  }
+
+  &__preview {
+    position: relative;
+    z-index: 1;
+    min-height: 612px;
+  }
+
+  @media (max-width: 1240px) {
+    &__title {
+      left: 0;
+      padding: 40px 63px 40px 75px;
+    }
+
+    &__preview {
+      min-height: auto;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &__title {
+      max-width: 450px;
+      padding: 35px 45px 35px 60px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    background-color: $color-default-white;
+
+    &::before {
+      content: none;
+    }
+
+    &__wrapper {
+      margin: 0 -30px;
+      padding: 30px 0;
+    }
+
+    &__title {
+      position: static;
+      padding: 23px 27px 23px 53px;
+      max-width: 406px;
+      border: 2px solid currentColor;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__wrapper {
+      margin: 0 -20px;
+    }
+
+    &__title {
+      border-radius: 30px;
+      padding: 20px;
+      margin: 0 20px;
+    }
+  }
+}
