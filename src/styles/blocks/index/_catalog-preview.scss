@@ -186,6 +186,7 @@
       }
 
       &__tab-button-wrapper {
+        max-width: 400px;
         column-gap: 3px;
         row-gap: 5px;
       }
@@ -215,11 +216,15 @@
     }
 
     @media (max-width: 768px) {
+      align-items: stretch;
+
       &__product-wrapper {
         position: absolute;
-        left: 0;
-        bottom: 0;
-        justify-content: stretch;
+        width: 57%;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 52%;
+        max-width: 280px;
       }
 
       &__product {
@@ -228,19 +233,18 @@
       }
 
       &__image {
-        position: relative;
-        right: 22px;
-        top: 50%;
-        transform: translateY(-50%);
+        width: 100%;
+        height: 100%;
       }
 
       &__type-tab {
-        bottom: 10px;
+        bottom: 0;
         gap: 10px;
-        width: 90%;
+        width: 68%;
         max-width: 260px;
         padding: 10px;
         border-radius: 25px;
+        transform: translateX(-38%);
       }
 
       &__type-tab-text {
@@ -248,16 +252,20 @@
       }
 
       &__info {
-        width: 100%;
+        width: 52%;
+        margin-left: auto;
         max-width: none;
+        min-height: 310px;
         gap: 15px;
-        padding: 20px 10px 20px 50%;
+        padding: 20px 10px 20px 0;
         border-radius: 0;
         box-shadow: none;
+        background-color: transparent;
       }
 
       &__tab-button-wrapper {
         max-width: 300px;
+        column-gap: 2px;
       }
 
       &__tab-content {
@@ -288,10 +296,12 @@
       &__product-wrapper {
         position: relative;
         top: auto;
-        left: auto;
-        bottom: auto;
+        right: auto;
         width: 100%;
         height: 325px;
+        transform: none;
+        width: 100%;
+        max-width: none;
       }
 
       &__product {
@@ -310,9 +320,11 @@
       &__type-tab {
         width: 200px;
         bottom: 30px;
+        transform: translateX(-50%);
       }
 
       &__info {
+        width: 100%;
         padding: 20px;
         border-top: 2px solid $color-default-grey;
         min-height: auto;

@@ -14,6 +14,7 @@
     <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
     <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
   </head>
 
   <body>
@@ -25,7 +26,7 @@
           </div>
           <nav class="header__nav nav" data-js-menu>
             <a class="nav__link button button--dark" href="#">Каталог</a>
-            <a class="nav__link button button--dark" href="#">О компании</a>
+            <a class="nav__link button button--dark" href="#">О&nbsp;компании</a>
             <a class="nav__link button button--dark" href="#">Доставка</a>
             <a class="nav__link button button--dark" href="#">Закон</a>
             <a class="nav__link button button--dark" href="#">Опт</a>
@@ -57,25 +58,25 @@
             <p class="hero__title title">
               <span class="hero__title-text">
                 Привет! Кот&#8209;кайфун здесь —
-                <span class="highlight">включаем</span>
+                <span class="highlight-additional">включаем</span>
                 режим веселья!
               </span>
             </p>
             <p class="hero__subtitle subtitle">
               <span class="hero__subtitle-text">
                 Не успеешь заскучать —
-                <span class="highlight">веселящий газ</span>
-                уже мчится к тебе!
+                <span class="highlight-additional">веселящий газ</span>
+                уже мчится к&nbsp;тебе!
               </span>
             </p>
           </div>
         </div>
       </div>
-      <section class="index-catalog">
-        <div class="index-catalog__container container">
-          <div class="index-catalog__wrapper">
-            <p class="index-catalog__title subtitle">Мяу&#8209;время пришло! Соберём идеальный набор закиси азота для твоей мега&#8209;вечеринки!</p>
-            <div class="index-catalog__preview catalog-preview" data-js-tab-container>
+      <div class="short-catalog bg-image">
+        <div class="short-catalog__container container">
+          <div class="short-catalog__wrapper">
+            <p class="short-catalog__title subtitle">Мяу&#8209;время пришло! Соберём идеальный набор закиси&nbsp;азота для твоей мега&#8209;вечеринки!</p>
+            <div class="short-catalog__preview catalog-preview" data-js-tab-container>
               <div class="catalog-preview__product-wrapper">
                 <div class="catalog-preview__product is-active" data-js-tab-content="10" data-js-tab-content-product>
                   <div class="catalog-preview__image">
@@ -186,9 +187,95 @@
             </div>
           </div>
         </div>
+      </div>
+      <section class="short-features bg-image">
+        <div class="short-features__container container">
+          <div class="short-features__wrapper">
+            <h2 class="visually-hidden">Наши преимущества</h2>
+            <div class="short-features__content">
+              <p class="short-features__title subtitle">
+                <span class="short-features__title-text">Мы предлагаем лучшие условия и лучшее качество закиси азота!</span>
+              </p>
+              <ul class="short-features__list">
+                <li class="short-features__item short-feature">
+                  <div class="short-feature__icon">
+                    <svg width="52" height="52">
+                      <use href="./img/sprite.svg#like"></use>
+                    </svg>
+                  </div>
+                  <span class="short-feature__text">Высококачественный газ&nbsp;из&nbsp;Череповца</span>
+                </li>
+                <li class="short-features__item short-feature">
+                  <div class="short-feature__icon">
+                    <svg width="52" height="52">
+                      <use href="./img/sprite.svg#timer"></use>
+                    </svg>
+                  </div>
+                  <span class="short-feature__text">Доставка в пределах МКАД круглосуточно от&nbsp;30&nbsp;минут</span>
+                </li>
+                <li class="short-features__item short-feature">
+                  <div class="short-feature__icon">
+                    <svg width="52" height="52">
+                      <use href="./img/sprite.svg#smile"></use>
+                    </svg>
+                  </div>
+                  <span class="short-feature__text">Приятные цены на газ по&nbsp;всей Москве</span>
+                </li>
+              </ul>
+              <div class="short-features__image">
+                <img src="./img/index/features/features-cat.png" width="603" height="836" alt="Кот-кайфун" />
+              </div>
+            </div>
+            <div class="short-features__banner sales-banner">
+              <div class="sales-banner__slider swiper" data-js-sales-banner-swiper>
+                <div class="sales-banner__slider-wrapper swiper-wrapper">
+                  <div class="sales-banner__slider-item swiper-slide">
+                    <div class="sales-banner__item">
+                      <!-- prettier-ignore -->
+                      <p class="sales-banner__item-text title">Забери два баллона по&nbsp;3,5&nbsp;кг за&thinsp;<span class="highlight-main">6.000&nbsp;₽</span></p>
+                      <a class="sales-banner__item-button button button--dark" href="#">Подробнее</a>
+                    </div>
+                    <div class="sales-banner__slider-item-image">
+                      <img src="./img/index/special/special-1.png" width="507" height="440" alt="2 баллона" />
+                    </div>
+                  </div>
+                  <div class="sales-banner__slider-item swiper-slide">
+                    <div class="sales-banner__item">
+                      <!-- prettier-ignore -->
+                      <p class="sales-banner__item-text title">Забери три баллона по&nbsp;3,5&nbsp;кг за&nbsp;<span class="highlight-main">9.000&nbsp;₽</span></p>
+                      <a class="sales-banner__item-button button button--dark" href="#">Подробнее</a>
+                    </div>
+                    <div class="sales-banner__slider-item-image">
+                      <img src="./img/index/special/special-2.png" width="507" height="440" alt="3 баллона" />
+                    </div>
+                  </div>
+                  <div class="sales-banner__slider-item swiper-slide">
+                    <div class="sales-banner__item">
+                      <p class="sales-banner__item-text title">
+                        Сдавай пустой баллон
+                        <span class="highlight-main">10&nbsp;л</span>
+                        и&nbsp;получай полный
+                        <span class="highlight-main">3,5&nbsp;кг</span>
+                      </p>
+                      <a class="sales-banner__item-button button button--dark" href="#">Подробнее</a>
+                    </div>
+                    <div class="sales-banner__slider-item-image">
+                      <img src="./img/index/special/special-3.png" width="507" height="440" alt="Баллон" />
+                    </div>
+                  </div>
+                </div>
+                <div class="sales-banner__slider-button-wrapper">
+                  <button class="sales-banner__slider-button slider-button slider-button--prev slider-button--light" type="button" data-js-sales-banner-swiper-button-prev></button>
+                  <button class="sales-banner__slider-button slider-button slider-button--next slider-button--light" type="button" data-js-sales-banner-swiper-button-next></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
     </main>
     <footer></footer>
     <script type="module" src="./main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 import "./styles/styles.scss";
+import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs";
 
-const useMobileMenu = () => {
+const initMobileMenu = () => {
   const body = document.body;
   const header = body.querySelector("[data-js-header]");
   const menuButton = header.querySelector("[data-js-menu-button]");
@@ -38,14 +39,14 @@ const useMobileMenu = () => {
   });
 };
 
-const useAllTabs = () => {
+const initAllTabs = () => {
   const removeActiveClass = (collection) => {
     collection.forEach((item) => {
       item.classList.remove("is-active");
     });
   };
 
-  const useTabs = (buttonCollection, contentCollectionArray) => {
+  const initTabs = (buttonCollection, contentCollectionArray) => {
     buttonCollection.forEach((button) => {
       const id = button.getAttribute("data-js-tab-button");
 
@@ -66,7 +67,7 @@ const useAllTabs = () => {
     });
   };
 
-  const useCatalogPreview = () => {
+  const initCatalogPreview = () => {
     const catalog = document.body.querySelector("[data-js-tab-container]");
 
     const tabButtonCollection = catalog.querySelectorAll("[data-js-tab-button-wrapper] > [data-js-tab-button]");
@@ -77,20 +78,39 @@ const useAllTabs = () => {
       return;
     }
 
-    useTabs(tabButtonCollection, [tabContentCollection, tabProductCollection]);
+    initTabs(tabButtonCollection, [tabContentCollection, tabProductCollection]);
 
     tabProductCollection.forEach((product) => {
       if (product.hasAttribute("data-js-tab-product-typed")) {
         const typeButtonCollection = product.querySelectorAll("[data-js-tab-button-type]");
         const typeProductCollection = product.querySelectorAll("[data-js-tab-product-type]");
 
-        useTabs(typeButtonCollection, [typeProductCollection]);
+        initTabs(typeButtonCollection, [typeProductCollection]);
       }
     });
   };
 
-  useCatalogPreview();
+  initCatalogPreview();
 };
 
-useMobileMenu();
-useAllTabs();
+const initSalesBannerSlider = () => {
+  const swiper = new Swiper("[data-js-sales-banner-swiper]", {
+    loop: true,
+    spaceBetween: 5,
+
+    navigation: {
+      nextEl: "[data-js-sales-banner-swiper-button-next]",
+      prevEl: "[data-js-sales-banner-swiper-button-prev]",
+    },
+
+    breakpoints: {
+      769: {
+        spaceBetween: 15,
+      },
+    },
+  });
+};
+
+initMobileMenu();
+initAllTabs();
+initSalesBannerSlider();
