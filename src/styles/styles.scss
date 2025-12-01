@@ -9,6 +9,7 @@
 @use "./blocks/common/button-tab";
 @use "./blocks/common/type-tab-buttons";
 @use "./blocks/common/slider-button";
+@use "./blocks/common/showmore-button";
 @use "./blocks/common/nav";
 @use "./blocks/common/phone";
 @use "./blocks/common/header";
@@ -18,3 +19,4 @@
 @use "./blocks/index/short-features";
 @use "./blocks/index/short-feature";
 @use "./blocks/index/sales-banner";
+@use "./blocks/index/short-about";

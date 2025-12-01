@@ -111,6 +111,53 @@ const initSalesBannerSlider = () => {
   });
 };
 
+const initTextCrop = () => {
+  const textContainerCollection = document.body.querySelectorAll("[data-js-text-crop-container]");
+
+  textContainerCollection.forEach((textContainer) => {
+    const wrapper = textContainer.querySelector("[data-js-text-crop]");
+    const textWrapper = wrapper.querySelector("p");
+    const button = textContainer.querySelector("[data-js-text-crop-button]");
+    const fullText = textWrapper.textContent;
+
+    const cropText = () => {
+      let symbolNumber = innerWidth <= 768 ? 188 : 436;
+      return `${fullText.slice(0, symbolNumber)}...`;
+    };
+
+    let croppedText = cropText();
+    let isSwownFull = false;
+
+    const hideFullText = () => {
+      textWrapper.textContent = croppedText;
+      button.textContent = "Просмотреть полностью";
+      isSwownFull = false;
+    };
+
+    const showFullText = () => {
+      textWrapper.textContent = fullText;
+      button.textContent = "Скрыть";
+      isSwownFull = true;
+    };
+
+    button.addEventListener("click", () => {
+      if (!isSwownFull) {
+        showFullText();
+      } else {
+        hideFullText();
+      }
+    });
+
+    hideFullText();
+
+    window.addEventListener("resize", () => {
+      croppedText = cropText();
+      hideFullText();
+    });
+  });
+};
+
 initMobileMenu();
 initAllTabs();
 initSalesBannerSlider();
+initTextCrop();

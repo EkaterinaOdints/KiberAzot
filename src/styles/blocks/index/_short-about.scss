@@ -1,0 +1,355 @@
+@use "../../common/variables" as *;
+
+.short-about {
+  padding: 60px 0 9px;
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 184px;
+      top: -64px;
+      display: block;
+      width: 195px;
+      aspect-ratio: 195 / 265;
+      background-image: url("../../img/cat-balloon-1.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+    }
+  }
+
+  &__promo {
+    position: relative;
+    padding-top: 134px;
+    flex-shrink: 1;
+  }
+
+  &__subtitle {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 573px;
+    margin: 0;
+    padding: 27px;
+    border: 3px solid $color-default-white;
+    background-color: $color-default-black;
+    border-radius: 40px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      border: 3px solid $color-default-white;
+    }
+
+    &::before {
+      width: 22px;
+      right: -31px;
+      top: 10px;
+    }
+
+    &::after {
+      width: 16px;
+      right: -51px;
+      top: -3px;
+    }
+  }
+
+  &__title {
+    position: absolute;
+    left: 432px;
+    top: 122px;
+    width: 594px;
+    margin: 0;
+    padding: 58px 107px;
+    background-color: $color-default-white;
+    color: $color-default-black;
+    border-radius: 50%;
+    transform: rotate(-3deg);
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: -35px;
+      bottom: 13px;
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-bottom: 100px solid $color-default-white;
+      transform: rotate(-115deg);
+    }
+  }
+
+  &__title-text {
+    position: relative;
+    z-index: 1;
+    display: block;
+    transform: rotate(3deg);
+  }
+
+  &__subtitle-text {
+    display: block;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 550px;
+    aspect-ratio: 531 / 661;
+    margin-left: -17px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text-content {
+    margin-bottom: 9px;
+    width: 510px;
+  }
+
+  &__text {
+    padding-top: 412px;
+    letter-spacing: 1px;
+    color: $color-text-white;
+    font-weight: 700;
+
+    p {
+      margin: 0;
+      overflow: hidden;
+    }
+  }
+
+  @media (max-width: 1240px) {
+    &__image {
+      margin-left: 0;
+    }
+
+    &__title {
+      left: auto;
+      right: -80%;
+      top: 138px;
+      width: 400px;
+      padding: 40px 50px;
+    }
+
+    &__text {
+      padding-top: 370px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    padding: 30px 0 9px;
+
+    &__wrapper {
+      flex-direction: column;
+
+      &::before {
+        top: auto;
+        bottom: 80px;
+        right: 0;
+        width: calc(100% - 530px);
+        max-width: 200px;
+      }
+    }
+
+    &__promo {
+      padding-top: 0;
+      width: 100%;
+    }
+
+    &__subtitle {
+      width: 50%;
+      left: auto;
+      right: 20px;
+      top: 20px;
+      padding: 20px;
+      border-radius: 30px;
+    }
+
+    &__title {
+      right: 0;
+      width: 50%;
+      top: auto;
+      bottom: 60px;
+      transform: rotate(3deg);
+      padding: 40px 30px 40px 50px;
+
+      &::after {
+        left: 0px;
+        bottom: 77px;
+        transform: rotate(-55deg);
+      }
+    }
+
+    &__image {
+      width: 50%;
+    }
+
+    &__text {
+      padding-top: 0;
+    }
+  }
+
+  @media (max-width: 768px) {
+    &__wrapper {
+      &::before {
+        bottom: auto;
+        top: 50%;
+        width: 50%;
+        max-width: 260px;
+        right: 5%;
+        opacity: 0.1;
+      }
+    }
+
+    &__promo {
+      padding-top: 100px;
+    }
+
+    &__subtitle {
+      width: 90%;
+      max-width: 500px;
+      right: auto;
+      left: 0;
+      top: -5px;
+      padding: 15px;
+      border-radius: 20px;
+
+      &::before {
+        width: 18px;
+        right: -30px;
+        top: 3px;
+      }
+
+      &::after {
+        width: 13px;
+        right: -45px;
+        top: -7px;
+      }
+    }
+
+    &__title {
+      width: 45%;
+      font-size: 5.5vw;
+      top: 140px;
+      bottom: auto;
+      padding: 30px 20px;
+      text-align: center;
+
+      &::after {
+        left: -17px;
+        bottom: 9px;
+        transform: rotate(-100deg);
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+      }
+    }
+
+    &__text {
+      margin-left: 20px;
+      margin-top: 20px;
+      font-weight: 400;
+    }
+
+    &__text-content {
+      width: 300px;
+    }
+
+    &__image {
+      width: 55%;
+      max-width: 340px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__wrapper {
+      &::before {
+        right: 0;
+        top: 60%;
+      }
+    }
+
+    &__promo {
+      padding-top: 10px;
+    }
+
+    &__subtitle {
+      position: relative;
+      top: 0;
+      padding: 10px;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border-width: 2px;
+
+      &::before,
+      &::after {
+        border-width: 2px;
+      }
+
+      &::before {
+        width: 14px;
+        right: -20px;
+        top: 0px;
+      }
+
+      &::after {
+        width: 10px;
+        right: -30px;
+        top: -8px;
+      }
+    }
+
+    &__title {
+      position: relative;
+      top: 0;
+      transform: none;
+      width: 100%;
+      max-width: 250px;
+      border-radius: 20px;
+      padding: 20px;
+      margin-left: auto;
+      margin-bottom: 10px;
+      font-size: 28px;
+      line-height: 110%;
+
+      &::after {
+        left: 50%;
+        bottom: -20px;
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-bottom: 60px solid #ffffff;
+        transform: rotate(180deg) translateX(50%);
+      }
+    }
+
+    &__title-text {
+      transform: none;
+    }
+
+    &__image {
+      width: 100%;
+      max-width: 300px;
+      margin-bottom: 15px;
+    }
+
+    &__text {
+      margin: 0;
+      padding: 0 10px;
+    }
+
+    &__text-content {
+      width: 260px;
+    }
+  }
+}
