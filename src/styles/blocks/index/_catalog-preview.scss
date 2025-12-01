@@ -111,7 +111,7 @@
     font-size: 18px;
     line-height: 130%;
     font-weight: 700;
-    color: $color-default-grey;
+    color: $color-default-lightgrey;
     letter-spacing: -0.2px;
     text-transform: lowercase;
   }
@@ -326,7 +326,7 @@
       &__info {
         width: 100%;
         padding: 20px;
-        border-top: 2px solid $color-default-grey;
+        border-top: 2px solid $color-default-lightgrey;
         min-height: auto;
       }
     }

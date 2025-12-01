@@ -2,6 +2,7 @@
 @use "./common/fonts";
 @use "./common/global";
 
+// -- components
 @use "./blocks/common/container";
 @use "./blocks/common/title";
 @use "./blocks/common/subtitle";
@@ -10,13 +11,19 @@
 @use "./blocks/common/type-tab-buttons";
 @use "./blocks/common/slider-button";
 @use "./blocks/common/showmore-button";
-@use "./blocks/common/nav";
 @use "./blocks/common/phone";
+
+// -- blocks
+@use "./blocks/common/nav";
+@use "./blocks/index/catalog-preview";
+@use "./blocks/index/short-feature";
+@use "./blocks/index/sales-banner";
+@use "./blocks/index/delivery-banner";
+
+// -- sections
 @use "./blocks/common/header";
 @use "./blocks/index/hero";
 @use "./blocks/index/short-catalog";
-@use "./blocks/index/catalog-preview";
 @use "./blocks/index/short-features";
-@use "./blocks/index/short-feature";
-@use "./blocks/index/sales-banner";
 @use "./blocks/index/short-about";
+@use "./blocks/index/index-delivery";

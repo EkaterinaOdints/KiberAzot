@@ -90,7 +90,6 @@
     width: 100%;
     bottom: 146px;
     left: 0;
-    transform: rotate(-4deg);
   }
 
   @media (max-width: 1240px) {
@@ -191,12 +190,11 @@
 
     &__banner {
       bottom: 52px;
-      transform: none;
     }
   }
 
   @media (max-width: 425px) {
-    padding: 30px 0;
+    padding: 30px 0 5px;
 
     &__wrapper {
       padding: 0 0 196px;

@@ -5,6 +5,7 @@
   color: $color-default-white;
   border-radius: 60px;
   overflow: hidden;
+  transform: rotate(-4deg);
 
   &__slider {
     position: relative;
@@ -15,7 +16,7 @@
     border-radius: 60px;
     background-color: $color-default-black;
     overflow: hidden;
-    box-shadow: inset 0 -10px 0 #494949;
+    box-shadow: inset 0 -10px 0 $color-default-grey;
   }
 
   &__item {
@@ -92,6 +93,7 @@
 
   @media (max-width: 768px) {
     border-radius: 40px;
+    transform: none;
 
     &__slider-item {
       border-radius: 40px;
