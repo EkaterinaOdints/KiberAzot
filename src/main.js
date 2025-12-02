@@ -93,21 +93,28 @@ const initAllTabs = () => {
   initCatalogPreview();
 };
 
-const initSalesBannerSlider = () => {
-  const swiper = new Swiper("[data-js-sales-banner-swiper]", {
-    loop: true,
-    spaceBetween: 5,
+const initSalesBannerSliders = () => {
+  const salesSliderCollection = document.body.querySelectorAll("[data-js-sales-banner-swiper]");
 
-    navigation: {
-      nextEl: "[data-js-sales-banner-swiper-button-next]",
-      prevEl: "[data-js-sales-banner-swiper-button-prev]",
-    },
+  salesSliderCollection.forEach((slider) => {
+    const buttonPrev = slider.querySelector("[data-js-sales-banner-swiper-button-prev]");
+    const buttonNext = slider.querySelector("[data-js-sales-banner-swiper-button-next]");
 
-    breakpoints: {
-      769: {
-        spaceBetween: 15,
+    const swiper = new Swiper(slider, {
+      loop: true,
+      spaceBetween: 5,
+
+      navigation: {
+        nextEl: buttonNext,
+        prevEl: buttonPrev,
       },
-    },
+
+      breakpoints: {
+        769: {
+          spaceBetween: 15,
+        },
+      },
+    });
   });
 };
 
@@ -159,5 +166,5 @@ const initTextCrop = () => {
 
 initMobileMenu();
 initAllTabs();
-initSalesBannerSlider();
+initSalesBannerSliders();
 initTextCrop();
