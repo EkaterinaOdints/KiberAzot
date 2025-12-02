@@ -1,0 +1,50 @@
+@use "../../common/variables" as *;
+
+.short-reviews {
+  position: relative;
+  background-color: $color-accent-main;
+  color: $color-default-black;
+  padding: 59px 0 140px;
+
+  &::before {
+    background-image: url("../../img/index/reviews/reviews-bg.svg");
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    margin: 0 200px 0 0;
+  }
+
+  &__button {
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0;
+
+    &__wrapper {
+      max-width: 510px;
+      margin: 0 auto;
+    }
+
+    &__title {
+      margin: 0 150px 0 10px;
+    }
+
+    &__button {
+      margin-left: 10px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__title {
+      margin: 0 100px 0 10px;
+    }
+  }
+}

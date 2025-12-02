@@ -1,11 +1,12 @@
 @use "../../common/variables" as *;
 
 .showmore-button {
-  display: block;
+  display: inline-block;
   background-color: transparent;
   border: none;
   border-bottom: 2px solid currentColor;
   padding: 10px 0 4px;
+  text-decoration: none;
   color: currentColor;
   font-size: inherit;
   line-height: inherit;

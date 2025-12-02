@@ -8,7 +8,7 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.3s, opacity 0.3s;
 
   &::after {
     content: "";
@@ -21,7 +21,17 @@
     mask-image: url("../../img/arrow.svg");
     mask-repeat: no-repeat;
     mask-position: center;
+    mask-size: contain;
     background-color: currentColor;
+  }
+
+  &:hover {
+    color: $color-accent-second;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    opacity: 0.5;
   }
 
   @media (max-width: 1024px) {
@@ -35,8 +45,8 @@
   }
 }
 
-.slider-button--prev {
-  transform: rotate(180deg);
+.slider-button--next {
+  transform: scale(-1, 1);
 }
 
 .slider-button--dark {
@@ -45,8 +55,4 @@
 
 .slider-button--light {
   color: $color-default-white;
-
-  &:hover {
-    color: $color-accent-second;
-  }
 }

@@ -118,6 +118,52 @@ const initSalesBannerSliders = () => {
   });
 };
 
+const initShortReviewsSliders = () => {
+  const reviewsSliderContainerCollection = document.body.querySelectorAll("[data-js-short-reviews-swiper-container]");
+
+  reviewsSliderContainerCollection.forEach((sliderContainer) => {
+    const slider = document.body.querySelector("[data-js-short-reviews-swiper]");
+    const buttonPrev = sliderContainer.querySelector("[data-js-short-reviews-swiper-button-prev]");
+    const buttonNext = sliderContainer.querySelector("[data-js-short-reviews-swiper-button-next]");
+
+    const swiper = new Swiper(slider, {
+      spaceBetween: 30,
+      slidesPerView: 1,
+      slidesOffsetBefore: 10,
+      slidesOffsetAfter: 10,
+
+      navigation: {
+        nextEl: buttonNext,
+        prevEl: buttonPrev,
+      },
+
+      breakpoints: {
+        769: {
+          slidesPerView: 1.5,
+          slidesOffsetBefore: 40,
+          slidesOffsetAfter: 40,
+        },
+
+        1241: {
+          slidesPerView: 2,
+          slidesOffsetBefore: 120,
+          slidesOffsetAfter: 120,
+        },
+
+        1440: {
+          slidesOffsetBefore: 195,
+          slidesOffsetAfter: 195,
+        },
+
+        1441: {
+          slidesOffsetBefore: 0,
+          slidesOffsetAfter: 0,
+        },
+      },
+    });
+  });
+};
+
 const initTextCrop = () => {
   const textContainerCollection = document.body.querySelectorAll("[data-js-text-crop-container]");
 
@@ -167,4 +213,5 @@ const initTextCrop = () => {
 initMobileMenu();
 initAllTabs();
 initSalesBannerSliders();
+initShortReviewsSliders();
 initTextCrop();

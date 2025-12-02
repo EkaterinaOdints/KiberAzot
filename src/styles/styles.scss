@@ -12,6 +12,7 @@
 @use "./blocks/common/slider-button";
 @use "./blocks/common/showmore-button";
 @use "./blocks/common/phone";
+@use "./blocks/common/review";
 
 // -- blocks
 @use "./blocks/common/nav";
@@ -19,6 +20,7 @@
 @use "./blocks/index/short-feature";
 @use "./blocks/index/sales-banner";
 @use "./blocks/index/delivery-banner";
+@use "./blocks/index/reviews-slider";
 
 // -- sections
 @use "./blocks/common/header";
@@ -27,3 +29,4 @@
 @use "./blocks/index/short-features";
 @use "./blocks/index/short-about";
 @use "./blocks/index/index-delivery";
+@use "./blocks/index/short-reviews";
