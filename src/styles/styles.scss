@@ -21,6 +21,8 @@
 @use "./blocks/index/sales-banner";
 @use "./blocks/index/delivery-banner";
 @use "./blocks/index/reviews-slider";
+@use "./blocks/common/accordion";
+@use "./blocks/common/brand-banner";
 
 // -- sections
 @use "./blocks/common/header";
@@ -30,3 +32,4 @@
 @use "./blocks/index/short-about";
 @use "./blocks/index/index-delivery";
 @use "./blocks/index/short-reviews";
+@use "./blocks/common/faq";

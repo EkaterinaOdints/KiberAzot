@@ -93,6 +93,24 @@ const initAllTabs = () => {
   initCatalogPreview();
 };
 
+const initAccordions = () => {
+  const accordionCollection = document.body.querySelectorAll("[data-js-accordion]");
+
+  accordionCollection.forEach((accordion) => {
+    const accordionItemCollection = accordion.querySelectorAll("[data-js-accordion-item]");
+
+    accordionItemCollection.forEach((item) => {
+      const button = item.querySelector("[data-js-accordion-item-button]");
+      const text = item.querySelector("[data-js-accordion-item-text]");
+
+      button.addEventListener("click", () => {
+        text.classList.toggle("is-active");
+        button.classList.toggle("is-active");
+      });
+    });
+  });
+};
+
 const initSalesBannerSliders = () => {
   const salesSliderCollection = document.body.querySelectorAll("[data-js-sales-banner-swiper]");
 
@@ -218,6 +236,7 @@ const initTextCrop = () => {
 
 initMobileMenu();
 initAllTabs();
+initAccordions();
 initSalesBannerSliders();
 initShortReviewsSliders();
 initTextCrop();

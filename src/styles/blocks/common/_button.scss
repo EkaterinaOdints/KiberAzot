@@ -9,6 +9,7 @@
   font-family: "Opsilon", "Arial", sans-serif;
   font-size: 32px;
   line-height: 120%;
+  border-radius: 80px;
   transition: background-color 0.3s;
   cursor: pointer;
 
@@ -22,8 +23,9 @@
   }
 
   @media (max-width: 768px) {
-    font-size: 26px;
-    padding: 10px 20px;
+    font-size: 22px;
+    padding: 10px;
+    border-radius: 60px;
   }
 }
 
@@ -32,7 +34,10 @@
   border: 1px solid $color-default-white;
   background-color: $color-default-black;
   box-shadow: -5px 9px 0 $color-default-white;
-  border-radius: 80px;
+
+  @media (max-width: 768px) {
+    box-shadow: -4px 7px 0 $color-default-white;
+  }
 }
 
 .button--light {
@@ -40,5 +45,8 @@
   border: 1px solid $color-default-black;
   background-color: $color-default-white;
   box-shadow: -5px 9px 0 $color-default-black;
-  border-radius: 80px;
+
+  @media (max-width: 768px) {
+    box-shadow: -4px 7px 0 $color-default-black;
+  }
 }
