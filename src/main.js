@@ -139,23 +139,29 @@ const initShortReviewsSliders = () => {
 
       breakpoints: {
         769: {
+          spaceBetween: 30,
           slidesPerView: 1.5,
           slidesOffsetBefore: 40,
           slidesOffsetAfter: 40,
         },
 
         1241: {
+          spaceBetween: 30,
           slidesPerView: 2,
           slidesOffsetBefore: 120,
           slidesOffsetAfter: 120,
         },
 
         1440: {
+          spaceBetween: 30,
+          slidesPerView: 2,
           slidesOffsetBefore: 195,
           slidesOffsetAfter: 195,
         },
 
         1441: {
+          spaceBetween: 30,
+          slidesPerView: 2,
           slidesOffsetBefore: 0,
           slidesOffsetAfter: 0,
         },
