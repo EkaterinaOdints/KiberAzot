@@ -74,13 +74,13 @@ const initAllTabs = () => {
     const tabContentCollection = catalog?.querySelectorAll("[data-js-tab-content-price]");
     const tabProductCollection = catalog?.querySelectorAll("[data-js-tab-content-product]");
 
-    if (tabButtonCollection.length < 1 || tabContentCollection.length < 1 || tabProductCollection.length < 1) {
+    if (tabButtonCollection?.length < 1 || tabContentCollection?.length < 1 || tabProductCollection?.length < 1) {
       return;
     }
 
     initTabs(tabButtonCollection, [tabContentCollection, tabProductCollection]);
 
-    tabProductCollection.forEach((product) => {
+    tabProductCollection?.forEach((product) => {
       if (product.hasAttribute("data-js-tab-product-typed")) {
         const typeButtonCollection = product.querySelectorAll("[data-js-tab-button-type]");
         const typeProductCollection = product.querySelectorAll("[data-js-tab-product-type]");
@@ -96,11 +96,11 @@ const initAllTabs = () => {
 const initAccordions = () => {
   const accordionCollection = document.body.querySelectorAll("[data-js-accordion]");
 
-  if (accordionCollection.length < 1) {
+  if (accordionCollection?.length < 1) {
     return;
   }
 
-  accordionCollection.forEach((accordion) => {
+  accordionCollection?.forEach((accordion) => {
     const accordionItemCollection = accordion.querySelectorAll("[data-js-accordion-item]");
 
     accordionItemCollection?.forEach((item) => {
@@ -118,11 +118,11 @@ const initAccordions = () => {
 const initSalesBannerSliders = () => {
   const salesSliderCollection = document.body.querySelectorAll("[data-js-sales-banner-swiper]");
 
-  if (salesSliderCollection.length < 1) {
+  if (salesSliderCollection?.length < 1) {
     return;
   }
 
-  salesSliderCollection.forEach((slider) => {
+  salesSliderCollection?.forEach((slider) => {
     const buttonPrev = slider.querySelector("[data-js-sales-banner-swiper-button-prev]");
     const buttonNext = slider.querySelector("[data-js-sales-banner-swiper-button-next]");
 
@@ -147,11 +147,11 @@ const initSalesBannerSliders = () => {
 const initShortReviewsSliders = () => {
   const reviewsSliderContainerCollection = document.body.querySelectorAll("[data-js-short-reviews-swiper-container]");
 
-  if (reviewsSliderContainerCollection.length < 1) {
+  if (reviewsSliderContainerCollection?.length < 1) {
     return;
   }
 
-  reviewsSliderContainerCollection.forEach((sliderContainer) => {
+  reviewsSliderContainerCollection?.forEach((sliderContainer) => {
     const slider = document.body.querySelector("[data-js-short-reviews-swiper]");
     const buttonPrev = sliderContainer.querySelector("[data-js-short-reviews-swiper-button-prev]");
     const buttonNext = sliderContainer.querySelector("[data-js-short-reviews-swiper-button-next]");
@@ -203,11 +203,11 @@ const initShortReviewsSliders = () => {
 const initTextCrop = () => {
   const textContainerCollection = document.body.querySelectorAll("[data-js-text-crop-container]");
 
-  if (textContainerCollection.length < 1) {
+  if (textContainerCollection?.length < 1) {
     return;
   }
 
-  textContainerCollection.forEach((textContainer) => {
+  textContainerCollection?.forEach((textContainer) => {
     const wrapper = textContainer.querySelector("[data-js-text-crop]");
     const textWrapper = wrapper?.querySelector("p");
     const button = textContainer.querySelector("[data-js-text-crop-button]");
