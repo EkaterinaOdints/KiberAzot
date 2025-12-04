@@ -71,6 +71,8 @@
   }
 
   @media (max-width: 768px) {
+    padding-bottom: 30px;
+
     &__wrapper {
       max-width: 680px;
       margin: 0 auto;
@@ -98,9 +100,8 @@
     }
 
     &__banner {
-      top: -85px;
       max-width: 510px;
-      margin: 0 auto;
+      margin: -85px auto 0;
     }
   }
 
@@ -111,7 +112,7 @@
     }
 
     &__banner {
-      top: -45px;
+      margin-top: -45px;
     }
   }
 }

@@ -1,3 +1,5 @@
+@use "../../common/variables" as *;
+
 .phone {
   display: flex;
   align-items: center;
@@ -7,6 +9,11 @@
   line-height: 100%;
   font-family: "Opsilon", "Arial", sans-serif;
   text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $color-accent-second;
+  }
 
   &__icon {
     flex-shrink: 0;
