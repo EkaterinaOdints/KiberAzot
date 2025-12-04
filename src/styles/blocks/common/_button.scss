@@ -10,6 +10,9 @@
   font-size: 32px;
   line-height: 120%;
   border-radius: 80px;
+  border: 1px solid currentColor;
+  box-shadow: -5px 9px 0 currentColor;
+  color: currentColor;
   transition: background-color 0.3s;
   cursor: pointer;
 
@@ -26,27 +29,16 @@
     font-size: 22px;
     padding: 10px;
     border-radius: 60px;
+    box-shadow: -4px 7px 0 currentColor;
   }
 }
 
 .button--dark {
   color: $color-default-white;
-  border: 1px solid $color-default-white;
   background-color: $color-default-black;
-  box-shadow: -5px 9px 0 $color-default-white;
-
-  @media (max-width: 768px) {
-    box-shadow: -4px 7px 0 $color-default-white;
-  }
 }
 
 .button--light {
   color: $color-default-black;
-  border: 1px solid $color-default-black;
   background-color: $color-default-white;
-  box-shadow: -5px 9px 0 $color-default-black;
-
-  @media (max-width: 768px) {
-    box-shadow: -4px 7px 0 $color-default-black;
-  }
 }
