@@ -47,13 +47,13 @@ const initAllTabs = () => {
   };
 
   const initTabs = (buttonCollection, contentCollectionArray) => {
-    buttonCollection.forEach((button) => {
+    buttonCollection?.forEach((button) => {
       const id = button.getAttribute("data-js-tab-button");
 
       button.addEventListener("click", () => {
         removeActiveClass(buttonCollection);
 
-        contentCollectionArray.forEach((collection) => {
+        contentCollectionArray?.forEach((collection) => {
           removeActiveClass(collection);
           collection.forEach((item) => {
             if (item.getAttribute("data-js-tab-content") === id) {
@@ -70,11 +70,11 @@ const initAllTabs = () => {
   const initCatalogPreview = () => {
     const catalog = document.body.querySelector("[data-js-tab-container]");
 
-    const tabButtonCollection = catalog.querySelectorAll("[data-js-tab-button-wrapper] > [data-js-tab-button]");
-    const tabContentCollection = catalog.querySelectorAll("[data-js-tab-content-price]");
-    const tabProductCollection = catalog.querySelectorAll("[data-js-tab-content-product]");
+    const tabButtonCollection = catalog?.querySelectorAll("[data-js-tab-button-wrapper] > [data-js-tab-button]");
+    const tabContentCollection = catalog?.querySelectorAll("[data-js-tab-content-price]");
+    const tabProductCollection = catalog?.querySelectorAll("[data-js-tab-content-product]");
 
-    if (!tabButtonCollection || !tabContentCollection || !tabProductCollection) {
+    if (tabButtonCollection.length < 1 || tabContentCollection.length < 1 || tabProductCollection.length < 1) {
       return;
     }
 
@@ -96,16 +96,20 @@ const initAllTabs = () => {
 const initAccordions = () => {
   const accordionCollection = document.body.querySelectorAll("[data-js-accordion]");
 
+  if (accordionCollection.length < 1) {
+    return;
+  }
+
   accordionCollection.forEach((accordion) => {
     const accordionItemCollection = accordion.querySelectorAll("[data-js-accordion-item]");
 
-    accordionItemCollection.forEach((item) => {
+    accordionItemCollection?.forEach((item) => {
       const button = item.querySelector("[data-js-accordion-item-button]");
       const text = item.querySelector("[data-js-accordion-item-text]");
 
       button.addEventListener("click", () => {
-        text.classList.toggle("is-active");
-        button.classList.toggle("is-active");
+        text?.classList.toggle("is-active");
+        button?.classList.toggle("is-active");
       });
     });
   });
@@ -113,6 +117,10 @@ const initAccordions = () => {
 
 const initSalesBannerSliders = () => {
   const salesSliderCollection = document.body.querySelectorAll("[data-js-sales-banner-swiper]");
+
+  if (salesSliderCollection.length < 1) {
+    return;
+  }
 
   salesSliderCollection.forEach((slider) => {
     const buttonPrev = slider.querySelector("[data-js-sales-banner-swiper-button-prev]");
@@ -138,6 +146,10 @@ const initSalesBannerSliders = () => {
 
 const initShortReviewsSliders = () => {
   const reviewsSliderContainerCollection = document.body.querySelectorAll("[data-js-short-reviews-swiper-container]");
+
+  if (reviewsSliderContainerCollection.length < 1) {
+    return;
+  }
 
   reviewsSliderContainerCollection.forEach((sliderContainer) => {
     const slider = document.body.querySelector("[data-js-short-reviews-swiper]");
@@ -191,11 +203,19 @@ const initShortReviewsSliders = () => {
 const initTextCrop = () => {
   const textContainerCollection = document.body.querySelectorAll("[data-js-text-crop-container]");
 
+  if (textContainerCollection.length < 1) {
+    return;
+  }
+
   textContainerCollection.forEach((textContainer) => {
     const wrapper = textContainer.querySelector("[data-js-text-crop]");
-    const textWrapper = wrapper.querySelector("p");
+    const textWrapper = wrapper?.querySelector("p");
     const button = textContainer.querySelector("[data-js-text-crop-button]");
-    const fullText = textWrapper.textContent;
+    const fullText = textWrapper?.textContent;
+
+    if (!textWrapper || !button || !fullText) {
+      return;
+    }
 
     const cropText = () => {
       let symbolNumber = innerWidth <= 768 ? 188 : 436;
