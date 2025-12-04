@@ -5,6 +5,7 @@
   margin-top: -1px;
   background-color: $color-accent-main;
   color: $color-default-black;
+  padding-bottom: 20px;
 
   &::before {
     background-image: url("../../img/faq/faq-bg.svg");
@@ -71,8 +72,6 @@
   }
 
   @media (max-width: 768px) {
-    padding-bottom: 30px;
-
     &__wrapper {
       max-width: 680px;
       margin: 0 auto;
