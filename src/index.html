@@ -49,8 +49,8 @@
     </header>
     <main>
       <div class="hero">
-        <h1 class="visually-hidden title"></h1>
         <div class="hero__wrapper">
+          <h1 class="visually-hidden heading">Главная</h1>
           <div class="hero__image">
             <picture>
               <source srcset="./img/index/hero/hero-cat@1x.webp 1x, ./img/index/hero/hero-cat@2x.webp 2x" type="image/webp" width="552" height="816" />
@@ -79,7 +79,7 @@
         <div class="short-catalog__container container">
           <div class="short-catalog__wrapper">
             <p class="short-catalog__title subtitle">Мяу&#8209;время пришло! Соберём идеальный набор закиси&nbsp;азота для твоей мега&#8209;вечеринки!</p>
-            <div class="short-catalog__preview catalog-preview" data-js-tab-container>
+            <div class="short-catalog__preview catalog-preview" data-js-catalog-preview-tab-container>
               <div class="catalog-preview__product-wrapper">
                 <div class="catalog-preview__product is-active" data-js-tab-content="10" data-js-tab-content-product>
                   <div class="catalog-preview__image">
@@ -121,8 +121,8 @@
                   <div class="catalog-preview__type-tab">
                     <span class="catalog-preview__type-tab-text">Выбирай формат баллона, который тебе по душе!</span>
                     <div class="catalog-preview__type-tab-buttons type-tab-buttons">
-                      <button class="type-tab-buttons__item is-active" type="button" data-js-tab-button="base" data-js-tab-button-type="base">Base</button>
-                      <button class="type-tab-buttons__item" type="button" data-js-tab-button="new" data-js-tab-button-type="new">New</button>
+                      <button class="type-tab-buttons__item is-active" type="button" data-js-tab-button="base">Base</button>
+                      <button class="type-tab-buttons__item" type="button" data-js-tab-button="new">New</button>
                     </div>
                   </div>
                 </div>
@@ -142,8 +142,8 @@
                   <div class="catalog-preview__type-tab">
                     <span class="catalog-preview__type-tab-text">Выбирай формат баллона, который тебе по душе!</span>
                     <div class="catalog-preview__type-tab-buttons type-tab-buttons">
-                      <button class="type-tab-buttons__item is-active" type="button" data-js-tab-button="base" data-js-tab-button-type="base">Base</button>
-                      <button class="type-tab-buttons__item" type="button" data-js-tab-button="new" data-js-tab-button-type="new">New</button>
+                      <button class="type-tab-buttons__item is-active" type="button" data-js-tab-button="base">Base</button>
+                      <button class="type-tab-buttons__item" type="button" data-js-tab-button="new">New</button>
                     </div>
                   </div>
                 </div>
@@ -159,51 +159,75 @@
                 <div class="catalog-preview__tab-content is-active" data-js-tab-content="10" data-js-tab-content-price>
                   <div class="catalog-preview__tab-content-item">
                     <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
-                    <span class="catalog-preview__tab-content-price-small">8.900 ₽</span>
+                    <span class="catalog-preview__tab-content-price-small">10l ₽</span>
                   </div>
                   <div class="catalog-preview__tab-content-item">
                     <span class="catalog-preview__tab-content-text">Продажа</span>
-                    <span class="catalog-preview__tab-content-price-big">11.900 ₽</span>
+                    <span class="catalog-preview__tab-content-price-big">10l ₽</span>
                   </div>
                 </div>
                 <div class="catalog-preview__tab-content" data-js-tab-content="5" data-js-tab-content-price>
                   <div class="catalog-preview__tab-content-item">
                     <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
-                    <span class="catalog-preview__tab-content-price-small">8.900 ₽</span>
+                    <span class="catalog-preview__tab-content-price-small">5l ₽</span>
                   </div>
                   <div class="catalog-preview__tab-content-item">
                     <span class="catalog-preview__tab-content-text">Продажа</span>
-                    <span class="catalog-preview__tab-content-price-big">11.900 ₽</span>
+                    <span class="catalog-preview__tab-content-price-big">5l ₽</span>
                   </div>
                 </div>
                 <div class="catalog-preview__tab-content" data-js-tab-content="4" data-js-tab-content-price>
                   <div class="catalog-preview__tab-content-item">
                     <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
-                    <span class="catalog-preview__tab-content-price-small">8.900 ₽</span>
+                    <span class="catalog-preview__tab-content-price-small">4l ₽</span>
                   </div>
                   <div class="catalog-preview__tab-content-item">
                     <span class="catalog-preview__tab-content-text">Продажа</span>
-                    <span class="catalog-preview__tab-content-price-big">11.900 ₽</span>
+                    <span class="catalog-preview__tab-content-price-big">4l ₽</span>
                   </div>
                 </div>
-                <div class="catalog-preview__tab-content" data-js-tab-content="2" data-js-tab-content-price>
-                  <div class="catalog-preview__tab-content-item">
-                    <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
-                    <span class="catalog-preview__tab-content-price-small">8.900 ₽</span>
+                <div class="catalog-preview__tab-content" data-js-tab-content="2" data-js-tab-content-price data-js-tab-content-price-typed>
+                  <div class="catalog-preview__tab-content-price catalog-preview__tab-content-price--typed is-active" data-js-tab-content="base">
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
+                      <span class="catalog-preview__tab-content-price-small">2l base ₽</span>
+                    </div>
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Продажа</span>
+                      <span class="catalog-preview__tab-content-price-big">2l base ₽</span>
+                    </div>
                   </div>
-                  <div class="catalog-preview__tab-content-item">
-                    <span class="catalog-preview__tab-content-text">Продажа</span>
-                    <span class="catalog-preview__tab-content-price-big">11.900 ₽</span>
+                  <div class="catalog-preview__tab-content-price catalog-preview__tab-content-price--typed" data-js-tab-content="new">
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
+                      <span class="catalog-preview__tab-content-price-small">2l new ₽</span>
+                    </div>
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Продажа</span>
+                      <span class="catalog-preview__tab-content-price-big">2l new ₽</span>
+                    </div>
                   </div>
                 </div>
-                <div class="catalog-preview__tab-content" data-js-tab-content="1" data-js-tab-content-price>
-                  <div class="catalog-preview__tab-content-item">
-                    <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
-                    <span class="catalog-preview__tab-content-price-small">8.900 ₽</span>
+                <div class="catalog-preview__tab-content" data-js-tab-content="1" data-js-tab-content-price data-js-tab-content-price-typed>
+                  <div class="catalog-preview__tab-content-price catalog-preview__tab-content-price--typed is-active" data-js-tab-content="base">
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
+                      <span class="catalog-preview__tab-content-price-small">1l base ₽</span>
+                    </div>
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Продажа</span>
+                      <span class="catalog-preview__tab-content-price-big">1l base ₽</span>
+                    </div>
                   </div>
-                  <div class="catalog-preview__tab-content-item">
-                    <span class="catalog-preview__tab-content-text">Продажа</span>
-                    <span class="catalog-preview__tab-content-price-big">11.900 ₽</span>
+                  <div class="catalog-preview__tab-content-price catalog-preview__tab-content-price--typed" data-js-tab-content="new">
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Обмен пустого на полный</span>
+                      <span class="catalog-preview__tab-content-price-small">1l new ₽</span>
+                    </div>
+                    <div class="catalog-preview__tab-content-item">
+                      <span class="catalog-preview__tab-content-text">Продажа</span>
+                      <span class="catalog-preview__tab-content-price-big">1l new ₽</span>
+                    </div>
                   </div>
                 </div>
                 <button class="catalog-preview__button button button--light" type="button">Заказать</button>

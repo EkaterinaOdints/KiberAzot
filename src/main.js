@@ -46,29 +46,16 @@ const initAllTabs = () => {
     });
   };
 
-  const initTabs = (buttonCollection, contentCollectionArray) => {
-    buttonCollection?.forEach((button) => {
-      const id = button.getAttribute("data-js-tab-button");
-
-      button.addEventListener("click", () => {
-        removeActiveClass(buttonCollection);
-
-        contentCollectionArray?.forEach((collection) => {
-          removeActiveClass(collection);
-          collection.forEach((item) => {
-            if (item.getAttribute("data-js-tab-content") === id) {
-              item.classList.add("is-active");
-            }
-          });
-        });
-
-        button.classList.add("is-active");
-      });
+  const activateItem = (collection, id) => {
+    collection.forEach((item) => {
+      if (item.dataset.jsTabContent === id) {
+        item.classList.add("is-active");
+      }
     });
   };
 
   const initCatalogPreview = () => {
-    const catalog = document.body.querySelector("[data-js-tab-container]");
+    const catalog = document.body.querySelector("[data-js-catalog-preview-tab-container]");
 
     const tabButtonCollection = catalog?.querySelectorAll("[data-js-tab-button-wrapper] > [data-js-tab-button]");
     const tabContentCollection = catalog?.querySelectorAll("[data-js-tab-content-price]");
@@ -78,14 +65,52 @@ const initAllTabs = () => {
       return;
     }
 
-    initTabs(tabButtonCollection, [tabContentCollection, tabProductCollection]);
+    // табы, переключающие продукт (картинка и цены)
+    tabButtonCollection?.forEach((button) => {
+      const id = button.dataset.jsTabButton;
 
+      button.addEventListener("click", () => {
+        removeActiveClass(tabButtonCollection);
+        removeActiveClass(tabContentCollection);
+        removeActiveClass(tabProductCollection);
+
+        activateItem(tabContentCollection, id);
+        activateItem(tabProductCollection, id);
+
+        button.classList.add("is-active");
+      });
+    });
+
+    // переключение картинок и цен в зависимости от типа
     tabProductCollection?.forEach((product) => {
       if (product.hasAttribute("data-js-tab-product-typed")) {
-        const typeButtonCollection = product.querySelectorAll("[data-js-tab-button-type]");
+        const typeButtonCollection = product.querySelectorAll("[data-js-tab-button]");
         const typeProductCollection = product.querySelectorAll("[data-js-tab-product-type]");
 
-        initTabs(typeButtonCollection, [typeProductCollection]);
+        const productId = product.dataset.jsTabContent;
+
+        typeButtonCollection?.forEach((button) => {
+          const id = button.dataset.jsTabButton;
+
+          button.addEventListener("click", () => {
+            removeActiveClass(typeButtonCollection);
+            removeActiveClass(typeProductCollection);
+
+            activateItem(typeProductCollection, id);
+
+            // переключение цен в зависимости от типа
+            tabContentCollection?.forEach((item) => {
+              if (item.dataset.jsTabContent === productId) {
+                const priceCollection = item.querySelectorAll("[data-js-tab-content]");
+
+                removeActiveClass(priceCollection);
+                activateItem(priceCollection, id);
+              }
+            });
+
+            button.classList.add("is-active");
+          });
+        });
       }
     });
   };
