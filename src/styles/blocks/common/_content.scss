@@ -1,0 +1,128 @@
+@use "../../common/variables" as *;
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+
+  p {
+    margin: 0;
+    font-size: 22px;
+    line-height: 155%;
+    font-weight: 700;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Opsilon", "Arial", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin: 10px 0 0;
+  }
+
+  h2 {
+    font-size: 26px;
+    line-height: 160%;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 24px;
+    line-height: 160%;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 135%;
+    letter-spacing: -0.1px;
+  }
+
+  li {
+    display: flex;
+    gap: 14px;
+
+    &::before {
+      content: "";
+      position: relative;
+      top: 11px;
+      display: block;
+      width: 18px;
+      height: 6px;
+      background-color: $color-accent-main;
+      flex-shrink: 0;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    gap: 16px;
+
+    p {
+      font-size: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 22px;
+    }
+
+    ul {
+      gap: 20px;
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    gap: 10px;
+
+    p {
+      font-size: 18px;
+      line-height: 140%;
+    }
+
+    h2 {
+      font-size: 22px;
+      line-height: 150%;
+    }
+
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-size: 20px;
+      line-height: 150%;
+    }
+
+    ul {
+      gap: 15px;
+      font-size: 16px;
+    }
+
+    li {
+      gap: 8px;
+
+      &::before {
+        top: 9px;
+        width: 9px;
+        height: 3px;
+      }
+    }
+  }
+}

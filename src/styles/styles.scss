@@ -4,6 +4,7 @@
 
 // -- components
 @use "./blocks/common/container";
+@use "./blocks/common/content";
 @use "./blocks/common/heading";
 @use "./blocks/common/title";
 @use "./blocks/common/subtitle";
@@ -26,6 +27,7 @@
 @use "./blocks/common/brand-banner";
 @use "./blocks/catalog/catalog-tab";
 @use "./blocks/catalog/product-preview-card";
+@use "./blocks/catalog/detail-card";
 
 // -- sections
 @use "./blocks/common/header";
