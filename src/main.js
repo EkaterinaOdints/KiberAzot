@@ -54,6 +54,39 @@ const initAllTabs = () => {
     });
   };
 
+  const initProductTypeChange = () => {
+    const productCollection = document.body.querySelectorAll("[data-js-product-typed]");
+
+    if (productCollection?.length < 1) {
+      return;
+    }
+
+    productCollection?.forEach((product) => {
+      if (!product) {
+        return;
+      }
+
+      const typeButtonCollection = product?.querySelectorAll("[data-js-type-button]");
+      const imageCollection = product?.querySelectorAll("[data-js-type-image]");
+      const priceCollection = product?.querySelectorAll("[data-js-type-price]");
+
+      typeButtonCollection?.forEach((button) => {
+        button.addEventListener("click", () => {
+          const id = button.dataset.jsTypeButton;
+
+          removeActiveClass(typeButtonCollection);
+          removeActiveClass(imageCollection);
+          removeActiveClass(priceCollection);
+
+          activateItem(imageCollection, id);
+          activateItem(priceCollection, id);
+
+          button.classList.add("is-active");
+        });
+      });
+    });
+  };
+
   const initCatalogPreview = () => {
     const catalog = document.body.querySelector("[data-js-catalog-preview-tab-container]");
 
@@ -140,40 +173,9 @@ const initAllTabs = () => {
         button.classList.add("is-active");
       });
     });
-
-    const initCatalogBottleType = () => {
-      const catalog = document.body.querySelector("[data-js-tab-content=bottles]");
-      const productTypedCollection = catalog?.querySelectorAll("[data-js-tab-product-typed]");
-
-      if (productTypedCollection?.length < 1) {
-        return;
-      }
-
-      productTypedCollection?.forEach((product) => {
-        const typeButtonCollection = product.querySelectorAll("[data-js-tab-button]");
-        const imageCollection = product.querySelectorAll("[data-js-tab-image]");
-        const priceCollection = product.querySelectorAll("[data-js-tab-price]");
-
-        typeButtonCollection?.forEach((button) => {
-          button.addEventListener("click", () => {
-            const id = button.dataset.jsTabButton;
-
-            removeActiveClass(typeButtonCollection);
-            removeActiveClass(imageCollection);
-            removeActiveClass(priceCollection);
-
-            activateItem(imageCollection, id);
-            activateItem(priceCollection, id);
-
-            button.classList.add("is-active");
-          });
-        });
-      });
-    };
-
-    initCatalogBottleType();
   };
 
+  initProductTypeChange();
   initCatalogPreview();
   initCatalog();
 };
