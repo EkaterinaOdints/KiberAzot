@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>My project</title>
+    <link rel="preload" href="./fonts/Opsilon-Regular.woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/Opsilon-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Regular.woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Bold.woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Bold.woff2" as="font" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <header class="header" data-js-header>
+      <div class="header__container container">
+        <div class="header__wrapper">
+          <a class="header__logo" href="index.html">
+            <img src="./img/logo.svg" width="145" height="35" alt="Логотип компании" />
+          </a>
+          <nav class="header__nav nav" data-js-menu>
+            <a class="nav__link button button--dark is-active">Каталог</a>
+            <a class="nav__link button button--dark" href="#">О&nbsp;компании</a>
+            <a class="nav__link button button--dark" href="#">Доставка</a>
+            <a class="nav__link button button--dark" href="#">Закон</a>
+            <a class="nav__link button button--dark" href="#">Опт</a>
+            <a class="nav__link button button--dark" href="#">Контакты</a>
+            <a class="nav__link button button--dark" href="#">Блог</a>
+          </nav>
+          <a class="header__phone phone" href="tel:+79654493111">
+            <div class="phone__icon">
+              <svg width="24" height="24">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <span class="phone__text">+7 965 449-31-11</span>
+          </a>
+          <button class="header__nav-button" type="button" data-js-menu-button>
+            <div class="header__nav-button-item"></div>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="catalog">
+        <div class="catalog__container container">
+          <div class="catalog__wrapper">
+            <h1 class="catalog__title heading">Каталог</h1>
+            <div class="catalog-tab" data-js-catalog-tab-container>
+              <div class="catalog-tab__button-wrapper" data-js-tab-button-wrapper>
+                <button class="catalog-tab__button button-tab button-tab--dark is-active" type="button" data-js-tab-button="bottles">Баллоны</button>
+                <button class="catalog-tab__button button-tab button-tab--dark" type="button" data-js-tab-button="balloons">Шарики</button>
+                <button class="catalog-tab__button button-tab button-tab--dark" type="button" data-js-tab-button="poppers">Попперсы</button>
+                <button class="catalog-tab__button button-tab button-tab--dark" type="button" data-js-tab-button="wholesale">Выкуп баллонов</button>
+              </div>
+              <div class="catalog-tab__content-wrapper" data-js-tab-content-wrapper>
+                <div class="catalog-tab__content catalog-tab__content--bottles is-active" data-js-tab-content="bottles">
+                  <div class="product-preview-card product-preview-card--big">
+                    <a class="product-preview-card__link" href="#"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title title">10 литров</h2>
+                    </div>
+                    <div class="product-preview-card__price">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Продажа</span>
+                        <span class="product-preview-card__price-number">11.900 ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Обмен пустого на&nbsp;полный</span>
+                        <span class="product-preview-card__price-number">8.900 ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <picture>
+                        <source srcset="./img/catalog/bottles/catalog-bottle-10l@1x.webp 1x, ./img/catalog/bottles/catalog-bottle-10l@2x.webp 2x" type="image/webp" width="450" height="268" />
+                        <img src="./img/catalog/bottles/catalog-bottle-10l@1x.png" srcset="./img/catalog/bottles/catalog-bottle-10l@2x.png 2x" width="450" height="268" alt="Баллон 10 литров" />
+                      </picture>
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button">Заказать</button>
+                  </div>
+
+                  <div class="product-preview-card product-preview-card--big">
+                    <a class="product-preview-card__link" href="#"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title title">5 литров</h2>
+                      <span class="product-preview-card__weight">Масса газа составляет 2.5 кг</span>
+                    </div>
+                    <div class="product-preview-card__price">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Продажа</span>
+                        <span class="product-preview-card__price-number">11.900 ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Обмен пустого на&nbsp;полный</span>
+                        <span class="product-preview-card__price-number">8.900 ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <picture>
+                        <source srcset="./img/catalog/bottles/catalog-bottle-5l@1x.webp 1x, ./img/catalog/bottles/catalog-bottle-5l@2x.webp 2x" type="image/webp" width="450" height="268" />
+                        <img src="./img/catalog/bottles/catalog-bottle-5l@1x.png" srcset="./img/catalog/bottles/catalog-bottle-5l@2x.png 2x" width="450" height="268" alt="Баллон 5 литров" />
+                      </picture>
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button">Заказать</button>
+                  </div>
+
+                  <div class="product-preview-card product-preview-card--big">
+                    <a class="product-preview-card__link" href="#"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title title">4 литра</h2>
+                      <span class="product-preview-card__weight">Масса газа составляет 2 кг</span>
+                    </div>
+                    <div class="product-preview-card__price">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Продажа</span>
+                        <span class="product-preview-card__price-number">11.900 ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Обмен пустого на&nbsp;полный</span>
+                        <span class="product-preview-card__price-number">8.900 ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <picture>
+                        <source srcset="./img/catalog/bottles/catalog-bottle-4l@1x.webp 1x, ./img/catalog/bottles/catalog-bottle-4l@2x.webp 2x" type="image/webp" width="450" height="268" />
+                        <img src="./img/catalog/bottles/catalog-bottle-4l@1x.png" srcset="./img/catalog/bottles/catalog-bottle-4l@2x.png 2x" width="450" height="268" alt="Баллон 4 литра" />
+                      </picture>
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button">Заказать</button>
+                  </div>
+
+                  <div class="product-preview-card product-preview-card--big" data-js-tab-product-typed>
+                    <a class="product-preview-card__link" href="#"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title title">2 литра</h2>
+                      <div class="product-preview-card__type-tab-buttons type-tab-buttons">
+                        <button class="type-tab-buttons__item is-active" type="button" data-js-tab-button="base">Base</button>
+                        <button class="type-tab-buttons__item" type="button" data-js-tab-button="new">New</button>
+                      </div>
+                      <span class="product-preview-card__weight">Масса газа составляет 1.2 кг</span>
+                    </div>
+                    <div class="product-preview-card__price product-preview-card__price--typed is-active" data-js-tab-price data-js-tab-content="base">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Продажа</span>
+                        <span class="product-preview-card__price-number">base ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Обмен пустого на&nbsp;полный</span>
+                        <span class="product-preview-card__price-number">base ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__price product-preview-card__price--typed" data-js-tab-price data-js-tab-content="new">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Продажа</span>
+                        <span class="product-preview-card__price-number">new ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Обмен пустого на&nbsp;полный</span>
+                        <span class="product-preview-card__price-number">new ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__image product-preview-card__image--typed is-active" data-js-tab-image data-js-tab-content="base">
+                      <picture>
+                        <source srcset="./img/catalog/bottles/catalog-bottle-2l@1x.webp 1x, ./img/catalog/bottles/catalog-bottle-2l@2x.webp 2x" type="image/webp" width="450" height="268" />
+                        <img src="./img/catalog/bottles/catalog-bottle-2l@1x.png" srcset="./img/catalog/bottles/catalog-bottle-2l@2x.png 2x" width="450" height="268" alt="Баллон 2 литра" />
+                      </picture>
+                    </div>
+                    <div class="product-preview-card__image product-preview-card__image--typed" data-js-tab-image data-js-tab-content="new">
+                      <picture>
+                        <source srcset="./img/catalog/bottles/catalog-bottle-2l-new@1x.webp 1x, ./img/catalog/bottles/catalog-bottle-2l-new@2x.webp 2x" type="image/webp" width="450" height="268" />
+                        <img src="./img/catalog/bottles/catalog-bottle-2l-new@1x.png" srcset="./img/catalog/bottles/catalog-bottle-2l-new@2x.png 2x" width="450" height="268" alt="Баллон 2 литра" />
+                      </picture>
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button">Заказать</button>
+                  </div>
+
+                  <div class="product-preview-card product-preview-card--big" data-js-tab-product-typed>
+                    <a class="product-preview-card__link" href="#"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title title">3,5 кг</h2>
+                      <div class="product-preview-card__type-tab-buttons type-tab-buttons">
+                        <button class="type-tab-buttons__item is-active" type="button" data-js-tab-button="base">Base</button>
+                        <button class="type-tab-buttons__item" type="button" data-js-tab-button="new">New</button>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__price product-preview-card__price--typed is-active" data-js-tab-price data-js-tab-content="base">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Продажа</span>
+                        <span class="product-preview-card__price-number">base ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Обмен пустого на&nbsp;полный</span>
+                        <span class="product-preview-card__price-number">base ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__price product-preview-card__price--typed" data-js-tab-price data-js-tab-content="new">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Продажа</span>
+                        <span class="product-preview-card__price-number">new ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">Обмен пустого на&nbsp;полный</span>
+                        <span class="product-preview-card__price-number">new ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__image product-preview-card__image--typed is-active" data-js-tab-image data-js-tab-content="base">
+                      <picture>
+                        <source srcset="./img/catalog/bottles/catalog-bottle-3.5kg@1x.webp 1x, ./img/catalog/bottles/catalog-bottle-3.5kg@2x.webp 2x" type="image/webp" width="450" height="268" />
+                        <img src="./img/catalog/bottles/catalog-bottle-3.5kg@1x.png" srcset="./img/catalog/bottles/catalog-bottle-3.5kg@2x.png 2x" width="450" height="268" alt="Баллон 3.5 кг" />
+                      </picture>
+                    </div>
+                    <div class="product-preview-card__image product-preview-card__image--typed" data-js-tab-image data-js-tab-content="new">
+                      <picture>
+                        <source srcset="./img/catalog/bottles/catalog-bottle-3.5kg-new@1x.webp 1x, ./img/catalog/bottles/catalog-bottle-3.5kg-new@2x.webp 2x" type="image/webp" width="450" height="268" />
+                        <img src="./img/catalog/bottles/catalog-bottle-3.5kg-new@1x.png" srcset="./img/catalog/bottles/catalog-bottle-3.5kg-new@2x.png 2x" width="450" height="268" alt="Баллон 3.5 кг" />
+                      </picture>
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button">Заказать</button>
+                  </div>
+                </div>
+                <div class="catalog-tab__content catalog-tab__content--balloons" data-js-tab-content="balloons">
+                  <div class="product-preview-card product-preview-card--big">
+                    <a class="product-preview-card__link" href="#"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title title">Силиконовые шарики</h2>
+                    </div>
+                    <div class="product-preview-card__price">
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">25 шт</span>
+                        <span class="product-preview-card__price-number">700 ₽</span>
+                      </div>
+                      <div class="product-preview-card__price-wrapper">
+                        <span class="product-preview-card__price-text">5 шт</span>
+                        <span class="product-preview-card__price-number">200 ₽</span>
+                      </div>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <picture>
+                        <source srcset="./img/catalog/balloons/catalog-balloons@1x.webp 1x, ./img/catalog/balloons/catalog-balloons@2x.webp 2x" type="image/webp" width="450" height="268" />
+                        <img src="./img/catalog/balloons/catalog-balloons@1x.png" srcset="./img/catalog/balloons/catalog-balloons@2x.png 2x" width="450" height="268" alt="Шарики" />
+                      </picture>
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button">Заказать</button>
+                  </div>
+                </div>
+                <div class="catalog-tab__content catalog-tab__content--poppers" data-js-tab-content="poppers">
+                  <div class="product-preview-card product-preview-card--small">
+                    <a class="product-preview-card__link" href="#"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title subtitle">Fist Mini</h2>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <picture>
+                        <source srcset="./img/catalog/poppers/poppers-diablo@1x.webp 1x, ./img/catalog/poppers/poppers-diablo@2x.webp 2x" type="image/webp" width="290" height="290" />
+                        <img src="./img/catalog/poppers/poppers-diablo@1x.png" srcset="./img/catalog/poppers/poppers-diablo@2x.png 2x" width="290" height="290" alt="Попперс Fist Mini" />
+                      </picture>
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button">Заказать</button>
+                  </div>
+
+                  <div class="product-preview-card product-preview-card--small">
+                    <a class="product-preview-card__link" href="#"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title subtitle">Crazy</h2>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <picture>
+                        <source srcset="./img/catalog/poppers/poppers-diablo@1x.webp 1x, ./img/catalog/poppers/poppers-diablo@2x.webp 2x" type="image/webp" width="290" height="290" />
+                        <img src="./img/catalog/poppers/poppers-diablo@1x.png" srcset="./img/catalog/poppers/poppers-diablo@2x.png 2x" width="290" height="290" alt="Попперс Crazy" />
+                      </picture>
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button">Заказать</button>
+                  </div>
+
+                  <div class="product-preview-card product-preview-card--small">
+                    <a class="product-preview-card__link" href="#"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title subtitle">Addict X</h2>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <picture>
+                        <source srcset="./img/catalog/poppers/poppers-diablo@1x.webp 1x, ./img/catalog/poppers/poppers-diablo@2x.webp 2x" type="image/webp" width="290" height="290" />
+                        <img src="./img/catalog/poppers/poppers-diablo@1x.png" srcset="./img/catalog/poppers/poppers-diablo@2x.png 2x" width="290" height="290" alt="Попперс Crazy" />
+                      </picture>
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button">Заказать</button>
+                  </div>
+
+                  <div class="product-preview-card product-preview-card--small">
+                    <a class="product-preview-card__link" href="#"></a>
+                    <div class="product-preview-card__info">
+                      <h2 class="product-preview-card__title subtitle">Diablo</h2>
+                    </div>
+                    <div class="product-preview-card__image">
+                      <picture>
+                        <source srcset="./img/catalog/poppers/poppers-diablo@1x.webp 1x, ./img/catalog/poppers/poppers-diablo@2x.webp 2x" type="image/webp" width="290" height="290" />
+                        <img src="./img/catalog/poppers/poppers-diablo@1x.png" srcset="./img/catalog/poppers/poppers-diablo@2x.png 2x" width="290" height="290" alt="Попперс Crazy" />
+                      </picture>
+                    </div>
+                    <button class="product-preview-card__button button button--light" type="button">Заказать</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="faq bg-image">
+        <div class="faq__container container">
+          <div class="faq__wrapper">
+            <div class="faq__content">
+              <div class="faq__image">
+                <picture>
+                  <source srcset="./img/faq/faq-cat@1x.webp 1x, ./img/faq/faq-cat@2x.webp 2x" type="image/webp" width="510" height="831" />
+                  <img src="./img/faq/faq-cat@1x.png" srcset="./img/faq/faq-cat@2x.png 2x" width="510" height="831" alt="Кот-кайфун" />
+                </picture>
+              </div>
+              <h2 class="faq__title title">Часто задаваемые вопросы</h2>
+              <div class="faq__list accordion" data-js-accordion>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Почему цена на сайте отличается от итоговой суммы?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <div class="accordion__item-text-content">
+                      <p>Веселящий газ – это химическое соединение N₂O (динитрогена оксид). Для развлекательного сегмента используется исключительно пищевая закись азота высшей очистки, с концентрацией основного вещества не менее 90%. Важно: только такой состав разрешен для свободного применения совершеннолетними. Медицинские смеси (с иным процентным соотношением) требуют контроля специалиста</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">На сколько шаров рассчитан баллон?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <div class="accordion__item-text-content">
+                      <ul>
+                        <li>3.5 л баллон рассчитан до 6 больших шаров и до 20 маленьких</li>
+                        <li>2 л баллон рассчитан до 15 больших либо до 40 маленьких</li>
+                        <li>5 л баллон рассчитан до 40 больших либо до 100 маленьких</li>
+                        <li>10 л рассчитан до 80 Шаров больших или до 200 маленьких</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Какое время доставки заказа?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <div class="accordion__item-text-content">
+                      <p>Веселящий газ – это химическое соединение N₂O (динитрогена оксид). Для развлекательного сегмента используется исключительно пищевая закись азота высшей очистки, с концентрацией основного вещества не менее 90%. Важно: только такой состав разрешен для свободного применения совершеннолетними. Медицинские смеси (с иным процентным соотношением) требуют контроля специалиста</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Хороший ли у вас газ?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <div class="accordion__item-text-content">
+                      <p>Веселящий газ – это химическое соединение N₂O (динитрогена оксид). Для развлекательного сегмента используется исключительно пищевая закись азота высшей очистки, с концентрацией основного вещества не менее 90%. Важно: только такой состав разрешен для свободного применения совершеннолетними. Медицинские смеси (с иным процентным соотношением) требуют контроля специалиста</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="faq__item accordion__item" data-js-accordion-item>
+                  <button class="accordion__item-button" type="button" data-js-accordion-item-button>
+                    <span class="accordion__item-title">Подходит ли другой объем баллона под замену на другой литраж?</span>
+                  </button>
+                  <div class="accordion__item-text" data-js-accordion-item-text>
+                    <div class="accordion__item-text-content">
+                      <p>Веселящий газ – это химическое соединение N₂O (динитрогена оксид). Для развлекательного сегмента используется исключительно пищевая закись азота высшей очистки, с концентрацией основного вещества не менее 90%. Важно: только такой состав разрешен для свободного применения совершеннолетними. Медицинские смеси (с иным процентным соотношением) требуют контроля специалиста</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="faq__banner brand-banner">
+              <div class="brand-banner__wrapper">
+                <button class="brand-banner__button button button--dark" type="button">Заказать веселящий газ</button>
+                <div class="brand-banner__logo">
+                  <img src="./img/logo.svg" width="690" height="167" alt="Логотип компании" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <div class="footer__wrapper">
+          <nav class="footer__nav nav" data-js-menu>
+            <a class="nav__link button is-active">Каталог</a>
+            <a class="nav__link button" href="#">О&nbsp;компании</a>
+            <a class="nav__link button" href="#">Доставка</a>
+            <a class="nav__link button" href="#">Закон</a>
+            <a class="nav__link button" href="#">Опт</a>
+            <a class="nav__link button" href="#">Контакты</a>
+            <a class="nav__link button" href="#">Блог</a>
+          </nav>
+          <a class="footer__phone phone" href="tel:+79654493111">
+            <div class="phone__icon">
+              <svg width="24" height="24">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <span class="phone__text">+7 965 449-31-11</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

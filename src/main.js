@@ -115,7 +115,67 @@ const initAllTabs = () => {
     });
   };
 
+  const initCatalog = () => {
+    const catalog = document.body.querySelector("[data-js-catalog-tab-container]");
+    const tabButtonCollection = catalog?.querySelectorAll("[data-js-tab-button-wrapper] > [data-js-tab-button]");
+    const tabContentCollection = catalog?.querySelectorAll("[data-js-tab-content-wrapper] > [data-js-tab-content]");
+
+    if (tabButtonCollection?.length < 1 || tabContentCollection?.length < 1) {
+      return;
+    }
+
+    tabButtonCollection?.forEach((button) => {
+      const id = button.dataset.jsTabButton;
+
+      button.addEventListener("click", () => {
+        removeActiveClass(tabButtonCollection);
+        removeActiveClass(tabContentCollection);
+
+        tabContentCollection.forEach((content) => {
+          if (content.dataset.jsTabContent === id) {
+            activateItem(tabContentCollection, id);
+          }
+        });
+
+        button.classList.add("is-active");
+      });
+    });
+
+    const initCatalogBottleType = () => {
+      const catalog = document.body.querySelector("[data-js-tab-content=bottles]");
+      const productTypedCollection = catalog?.querySelectorAll("[data-js-tab-product-typed]");
+
+      if (productTypedCollection?.length < 1) {
+        return;
+      }
+
+      productTypedCollection?.forEach((product) => {
+        const typeButtonCollection = product.querySelectorAll("[data-js-tab-button]");
+        const imageCollection = product.querySelectorAll("[data-js-tab-image]");
+        const priceCollection = product.querySelectorAll("[data-js-tab-price]");
+
+        typeButtonCollection?.forEach((button) => {
+          button.addEventListener("click", () => {
+            const id = button.dataset.jsTabButton;
+
+            removeActiveClass(typeButtonCollection);
+            removeActiveClass(imageCollection);
+            removeActiveClass(priceCollection);
+
+            activateItem(imageCollection, id);
+            activateItem(priceCollection, id);
+
+            button.classList.add("is-active");
+          });
+        });
+      });
+    };
+
+    initCatalogBottleType();
+  };
+
   initCatalogPreview();
+  initCatalog();
 };
 
 const initAccordions = () => {

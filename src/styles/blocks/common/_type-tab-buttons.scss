@@ -8,19 +8,25 @@
 
   &__item {
     flex-grow: 1;
-    padding: 6px 40px;
+    padding: 8px 32px;
+    font-size: 18px;
+    line-height: 100%;
     background-color: transparent;
     color: $color-default-white;
     border: none;
     border-radius: 8px;
     font-family: "Opsilon", "Arial", sans-serif;
-    font-size: 24px;
-    line-height: 120%;
     cursor: pointer;
 
     &:hover {
       background-color: $color-transparent-white;
     }
+  }
+
+  &__item--big {
+    padding: 6px 40px;
+    font-size: 24px;
+    line-height: 120%;
   }
 
   &__item.is-active {
@@ -31,20 +37,25 @@
   }
 
   @media (max-width: 1024px) {
-    &__item {
+    &__item--big {
       font-size: 20px;
     }
   }
 
   @media (max-width: 768px) {
     &__item {
+      padding: 6px 20px;
+      font-size: 16px;
+    }
+
+    &__item--big {
       padding: 6px 15px;
       font-size: 18px;
     }
   }
 
   @media (max-width: 425px) {
-    &__item {
+    &__item--big {
       padding: 6px 10px;
       font-size: 16px;
     }

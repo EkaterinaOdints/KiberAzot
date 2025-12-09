@@ -4,6 +4,7 @@
 
 // -- components
 @use "./blocks/common/container";
+@use "./blocks/common/heading";
 @use "./blocks/common/title";
 @use "./blocks/common/subtitle";
 @use "./blocks/common/button";
@@ -23,6 +24,8 @@
 @use "./blocks/index/reviews-slider";
 @use "./blocks/common/accordion";
 @use "./blocks/common/brand-banner";
+@use "./blocks/catalog/catalog-tab";
+@use "./blocks/catalog/product-preview-card";
 
 // -- sections
 @use "./blocks/common/header";
@@ -34,3 +37,4 @@
 @use "./blocks/index/short-reviews";
 @use "./blocks/common/faq";
 @use "./blocks/common/footer";
+@use "./blocks/catalog/catalog";
