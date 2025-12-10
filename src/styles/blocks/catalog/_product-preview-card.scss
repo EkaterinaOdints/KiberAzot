@@ -3,7 +3,6 @@
 .product-preview-card {
   position: relative;
   display: grid;
-  row-gap: 20px;
   background-color: $color-default-white;
   box-shadow: inset 0 -10px 0 $color-transparent-grey;
   border-radius: 60px;
@@ -34,7 +33,7 @@
   }
 
   &__title {
-    margin: 0;
+    margin: 0 0 20px;
   }
 
   &__weight {
@@ -42,6 +41,7 @@
     line-height: 130%;
     font-weight: 700;
     letter-spacing: 0.3px;
+    margin-bottom: 30px;
   }
 
   &__price {
@@ -113,8 +113,9 @@
   &--big {
     width: 100%;
     grid-template-areas:
-      "info  image"
-      "price image";
+      "info   image"
+      "price  image"
+      "price button";
     grid-template-columns: 1fr 1fr;
     padding: 40px 50px 40px 40px;
 
@@ -122,14 +123,11 @@
       width: 450px;
       max-width: 450px;
       aspect-ratio: 450 / 268;
-      margin-bottom: 52px;
       justify-self: end;
     }
 
     .product-preview-card__button {
-      position: absolute;
-      right: 50px;
-      bottom: 40px;
+      justify-self: end;
       font-size: 24px;
       line-height: 100%;
       padding: 13px 74px;
@@ -191,15 +189,28 @@
   }
 
   @media (max-width: 768px) {
-    border-radius: 40px;
+    border-radius: 30px;
 
     &__link {
-      border-radius: 40px;
+      border-radius: 30px;
+    }
+
+    &__title {
+      margin: 0 0 10px;
+    }
+
+    &__info {
+      gap: 5px;
     }
 
     &__weight {
       font-size: 14px;
       letter-spacing: normal;
+      margin-bottom: 15px;
+    }
+
+    &__price-number {
+      font-size: 36px;
     }
 
     &__type-tab-buttons {
@@ -210,19 +221,18 @@
       grid-template-columns: 1fr 1.5fr;
       grid-template-areas:
         "info  info"
-        "price image";
-      padding: 30px 20px;
+        "price image"
+        "price button";
+      padding: 25px 20px;
 
       .product-preview-card__image {
-        margin-bottom: 42px;
         max-width: 330px;
       }
 
       .product-preview-card__button {
-        right: 15px;
-        bottom: 30px;
         font-size: 20px;
         padding: 10px 40px;
+        margin-right: -7px;
       }
     }
 
@@ -250,39 +260,37 @@
       "button";
     gap: 0;
     padding: 20px 15px;
-    border-radius: 30px;
-
-    &__link {
-      border-radius: 30px;
-    }
 
     &__info {
       margin-bottom: 15px;
+    }
+
+    &__title {
+      margin: 0 0 10px;
     }
 
     &__price {
       margin-bottom: 15px;
     }
 
+    &__weight {
+      margin-bottom: 5px;
+    }
+
+    .product-preview-card__button {
+      width: 100%;
+    }
+
     &--big {
       .product-preview-card__image {
         margin-bottom: 0;
-      }
-
-      .product-preview-card__button {
-        position: static;
-        width: 100%;
+        justify-self: start;
       }
     }
 
     &--small {
       width: 100%;
       padding: 30px;
-
-      .product-preview-card__button {
-        max-width: 250px;
-        margin-top: 10px;
-      }
     }
   }
 }

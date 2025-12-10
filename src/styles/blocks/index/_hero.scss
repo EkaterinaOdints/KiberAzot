@@ -37,14 +37,14 @@
     position: relative;
     max-width: 1440px;
     margin: 0 auto;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding-top: 23px;
   }
 
   &__text {
-    position: absolute;
-    top: 22px;
-    right: 561px;
-    width: 771px;
+    position: relative;
+    margin-right: -90px;
     z-index: 2;
   }
 
@@ -103,8 +103,8 @@
 
   &__image {
     position: relative;
-    margin-left: auto;
-    margin-right: 177px;
+    margin-top: -23px;
+    margin-right: 72px;
     width: 552px;
     aspect-ratio: 552 / 816;
     z-index: -2;
@@ -134,9 +134,6 @@
 
     &__text {
       width: 54%;
-      right: auto;
-      left: 5%;
-      top: 5%;
     }
 
     &__title {
@@ -170,10 +167,6 @@
         transform: rotate(84deg);
       }
     }
-
-    &__image {
-      margin-right: 150px;
-    }
   }
 
   @media (max-width: 1024px) {
@@ -197,7 +190,11 @@
     }
 
     &__image {
-      margin-right: 90px;
+      margin-right: 0;
+    }
+
+    &__text {
+      margin-right: -10px;
     }
   }
 
@@ -205,13 +202,17 @@
     padding-top: 59px;
 
     &__image {
+      margin-top: 30px;
+    }
+
+    &__text {
       margin-right: 30px;
+      text-align: center;
     }
 
     &__title {
       padding: 30px 30px 25px;
       width: 90%;
-      text-align: center;
 
       &::after {
         left: 110px;
@@ -228,7 +229,6 @@
       left: 70px;
       top: 7px;
       font-size: 3.5vw;
-      text-align: center;
 
       &::after {
         right: -2px;
@@ -241,6 +241,10 @@
     }
 
     @media (max-width: 425px) {
+      &__wrapper {
+        flex-direction: column-reverse;
+      }
+
       &::before {
         height: 100%;
         bottom: auto;
@@ -249,15 +253,15 @@
       }
 
       &::after {
-        bottom: auto;
         top: 487px;
       }
 
       &__text {
-        position: static;
         width: 100%;
         background-color: $color-accent-main;
         padding: 0 20px 30px;
+        text-align: start;
+        margin-right: 0;
       }
 
       &__image {
