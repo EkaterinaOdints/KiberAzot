@@ -1,11 +1,13 @@
 @use "../../common/variables" as *;
 
 .delivery-banner {
+  position: relative;
   color: $color-default-black;
   background-color: $color-default-white;
   border-radius: 60px;
   box-shadow: 0 10px 0 $color-default-grey;
   transform: rotate(-4deg);
+  z-index: 2;
 
   &__wrapper {
     display: flex;

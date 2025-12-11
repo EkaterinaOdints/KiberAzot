@@ -1,6 +1,7 @@
 @use "../../common/variables" as *;
 
 .sales-banner {
+  position: relative;
   z-index: 2;
   color: $color-default-white;
   border-radius: 60px;
