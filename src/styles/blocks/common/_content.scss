@@ -36,7 +36,8 @@
     line-height: 160%;
   }
 
-  ul {
+  ul,
+  ol {
     display: flex;
     flex-direction: column;
     gap: 24px;
@@ -49,19 +50,47 @@
     letter-spacing: -0.1px;
   }
 
-  li {
-    display: flex;
-    gap: 14px;
+  ul {
+    li {
+      display: flex;
+      gap: 14px;
 
-    &::before {
-      content: "";
-      position: relative;
-      top: 11px;
-      display: block;
-      width: 18px;
-      height: 6px;
-      background-color: $color-accent-main;
-      flex-shrink: 0;
+      &::before {
+        content: "";
+        position: relative;
+        top: 11px;
+        display: block;
+        width: 18px;
+        height: 6px;
+        background-color: $color-accent-main;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: num;
+
+    li {
+      display: flex;
+      gap: 14px;
+
+      &::before {
+        content: counter(num) ".";
+        counter-increment: num;
+        flex-shrink: 0;
+        color: $color-accent-main;
+      }
+    }
+  }
+
+  a {
+    color: currentColor;
+    transition: color 0.3s;
+    text-underline-offset: 3px;
+
+    &:hover {
+      color: $color-accent-main;
     }
   }
 
@@ -83,7 +112,8 @@
       font-size: 22px;
     }
 
-    ul {
+    ul,
+    ol {
       gap: 20px;
       font-size: 18px;
     }
@@ -110,18 +140,21 @@
       line-height: 150%;
     }
 
-    ul {
+    ul,
+    ol {
       gap: 15px;
       font-size: 16px;
     }
 
-    li {
-      gap: 8px;
+    ul {
+      li {
+        gap: 8px;
 
-      &::before {
-        top: 9px;
-        width: 9px;
-        height: 3px;
+        &::before {
+          top: 9px;
+          width: 9px;
+          height: 3px;
+        }
       }
     }
   }

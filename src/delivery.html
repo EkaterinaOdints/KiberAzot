@@ -27,7 +27,7 @@
           <nav class="header__nav nav" data-js-menu>
             <a class="nav__link button button--dark" href="catalog.html">Каталог</a>
             <a class="nav__link button button--dark" href="#">О&nbsp;компании</a>
-            <a class="nav__link button button--dark" href="delivery.html">Доставка</a>
+            <a class="nav__link button button--dark is-active">Доставка</a>
             <a class="nav__link button button--dark" href="#">Закон</a>
             <a class="nav__link button button--dark" href="#">Опт</a>
             <a class="nav__link button button--dark" href="#">Контакты</a>
@@ -47,57 +47,70 @@
         </div>
       </div>
     </header>
-    <section class="detail">
-      <div class="detail__container container">
-        <div class="detail__card detail-card" data-js-product-typed>
-          <div class="detail-card__wrapper">
-            <h2 class="detail-card__title title">Пищевая закись азота 3.5&nbsp;кг</h2>
-            <div class="detail-card__price detail-card__price--typed is-active" data-js-type-price data-js-tab-content="base">
-              <div class="detail-card__price-wrapper">
-                <span class="detail-card__price-text">обмен пустого на полный</span>
-                <span class="detail-card__price-number">8.900 ₽</span>
+    <section class="delivery">
+      <div class="delivery__container container">
+        <div class="delivery__wrapper">
+          <h1 class="delivery__title heading">Доставка</h1>
+          <div class="delivery-tab" data-js-tab-container>
+            <div class="delivery-tab__button-wrapper type-tab-buttons type-tab-buttons--big" data-js-tab-button-wrapper>
+              <button class="delivery-tab__button type-tab-buttons__item is-active" type="button" data-js-tab-button="moscow">Москва</button>
+              <button class="delivery-tab__button type-tab-buttons__item" type="button" data-js-tab-button="regions">Регионы</button>
+            </div>
+            <div class="delivery-tab__content-wrapper" data-js-tab-content-wrapper>
+              <div class="delivery-tab__content is-active" data-js-tab-content="moscow">
+                <div class="delivery-tab__info">
+                  <h2 class="delivery-tab__title subheading">Доставка по Москве</h2>
+                  <div class="delivery-tab__text">
+                    <p>Мы осуществляем круглосуточную доставку закиси азота (N₂O) по всей Москве в максимально сжатые сроки. Газ хранится и транспортируется только в&nbsp;прочных стальных баллонах, обеспечивающих полную защиту от утечек,перегрева и повреждений.</p>
+                  </div>
+                </div>
+                <div class="delivery-tab__image">
+                  <picture>
+                    <source srcset="./img/delivery/delivery-cat@1x.webp 1x, ./img/delivery/delivery-cat@2x.webp 2x" type="image/webp" width="511" height="511" />
+                    <img src="./img/delivery/delivery-cat@1x.png" srcset="./img/delivery/delivery-cat@2x.png 2x" width="511" height="511" alt="Кот-кайфун" />
+                  </picture>
+                </div>
+                <div class="delivery-tab__additional">
+                  <div class="delivery-tab__additional-item">
+                    <h3 class="delivery-tab__subtitle subheading">Способы доставки</h3>
+                    <div class="delivery-tab__additional-text content">
+                      <ul>
+                        <li>В пределах Москвы наши курьеры доставят закись за 30-60 минут с&nbsp;момента заказа, стоимость услуги составляет 700 рублей</li>
+                        <li>За МКАД на расстояние до 5 км доставка осуществляется бесплатно, больше 5 км – по цене 50 рублей за километр</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="detail-card__price-wrapper">
-                <span class="detail-card__price-text">продажа</span>
-                <span class="detail-card__price-number">11.900 ₽</span>
+              <div class="delivery-tab__content" data-js-tab-content="regions">
+                <div class="delivery-tab__info">
+                  <h2 class="delivery-tab__title subheading">Доставка в регионы</h2>
+                  <div class="delivery-tab__text">
+                    <p>Мы осуществляем доставку закиси азота по всей России. Газ хранится и перевозится исключительно в прочных стальных баллонах, обеспечивающих надежную защиту от утечек, перегрева и механических повреждений.</p>
+                  </div>
+                </div>
+                <div class="delivery-tab__image">
+                  <picture>
+                    <source srcset="./img/delivery/delivery-cat@1x.webp 1x, ./img/delivery/delivery-cat@2x.webp 2x" type="image/webp" width="511" height="262" />
+                    <img src="./img/delivery/delivery-cat@1x.png" srcset="./img/delivery/delivery-cat@2x.png 2x" width="511" height="262" alt="Кот-кайфун" />
+                  </picture>
+                </div>
+                <div class="delivery-tab__additional">
+                  <div class="delivery-tab__additional-item">
+                    <h3 class="delivery-tab__subtitle subheading">Способы доставки</h3>
+                    <div class="delivery-tab__additional-text content">
+                      <ul>
+                        <li>Для отправки в регионы используем услуги транспортной компании, что обеспечивает надежность и оперативность доставки</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="delivery-tab__additional-item">
+                    <h3 class="delivery-tab__subtitle delivery-tab__subtitle--centered subheading">Доставка в регионы осуществляется при заказе от 10 баллонов</h3>
+                    <button class="delivery-tab__button button button--light" type="button">Заказать</button>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="detail-card__price detail-card__price--typed" data-js-type-price data-js-tab-content="new">
-              <div class="detail-card__price-wrapper">
-                <span class="detail-card__price-text">обмен пустого на полный</span>
-                <span class="detail-card__price-number">8.new ₽</span>
-              </div>
-              <div class="detail-card__price-wrapper">
-                <span class="detail-card__price-text">продажа</span>
-                <span class="detail-card__price-number">11.new ₽</span>
-              </div>
-            </div>
-            <button class="detail-card__button button button--light" type="button">Заказать</button>
-            <div class="detail-card__image detail-card__image--typed is-active" data-js-type-image data-js-tab-content="base">
-              <picture>
-                <source srcset="./img/catalog/bottles/detail/catalog-detail-bottle-3.5kg@1x.webp 1x, ./img/catalog/bottles/detail/catalog-detail-bottle-3.5kg@2x.webp 2x" type="image/webp" width="523" height="562" />
-                <img src="./img/catalog/bottles/detail/catalog-detail-bottle-3.5kg@1x.png" srcset="./img/catalog/bottles/detail/catalog-detail-bottle-3.5kg@2x.png 2x" width="523" height="562" alt="Баллон 3.5 кг" />
-              </picture>
-            </div>
-            <div class="detail-card__image detail-card__image--typed" data-js-type-image data-js-tab-content="new">
-              <picture>
-                <source srcset="./img/catalog/bottles/detail/catalog-detail-bottle-3.5kg-new@1x.webp 1x, ./img/catalog/bottles/detail/catalog-detail-bottle-3.5kg-new@2x.webp 2x" type="image/webp" width="523" height="562" />
-                <img src="./img/catalog/bottles/detail/catalog-detail-bottle-3.5kg-new@1x.png" srcset="./img/catalog/bottles/detail/catalog-detail-bottle-3.5kg-new@2x.png 2x" width="523" height="562" alt="Баллон 3.5 кг" />
-              </picture>
-            </div>
-            <div class="detail-card__type-tab">
-              <span class="detail-card__type-tab-text">Выбирай формат баллона, который тебе по душе!</span>
-              <div class="detail-card__type-tab-buttons type-tab-buttons type-tab-buttons--big">
-                <button class="type-tab-buttons__item is-active" type="button" data-js-type-button="base">Base</button>
-                <button class="type-tab-buttons__item" type="button" data-js-type-button="new">New</button>
-              </div>
-            </div>
-          </div>
-          <div class="detail-card__text-wrapper content">
-            <p>
-              Пищевая закись азота – это бесцветный газ с характерным привкусом и запахом, который имеет химическую формулу N2O. Она отличается от газа технического назначения большей чистотой и отсутствием примесей, которые могут причинить вред здоровью человека. Пищевая закись при вдыхании оказывает легкий опьяняющий и расслабляющий эффект, вследствие чего N2O еще называют «веселящий газ». Обратите внимание, что существует еще...Пищевая закись азота – это бесцнии оказывает легкий опьяняющий и расслабляющий эффект, вследствие чего N2O еще называют «веселящий газ». Обратите внимание, что существует еще...Пищевая закись азота – это бесцнии оказывает легкий опьяняющий и расслабляющий эффект, вследствие чего N2O еще называют «веселящий газ». Обратите внимание, что существует еще...Пищевая закись азота – это бесцнии оказывает легкий опьяняющий и расслабляющий эффект, вследствие чего N2O еще называют «веселящий газ». Обратите внимание, что существует еще...Пищевая закись азота – это
-              бесцветный газ с характерным привкусом и запахом, который имеет химическую формулу N2O. Она отличается от газа технического назначения большей чистотой и отсутствием примесей, которые могут причинить вред здоровью человека. Пищевая закись при вдыхании оказывает легкий опьяняющий и расслабляющий эффект, вследствие чего N2O еще называют «веселящий газ»
-            </p>
           </div>
         </div>
       </div>

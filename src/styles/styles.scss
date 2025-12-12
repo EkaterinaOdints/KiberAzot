@@ -8,6 +8,7 @@
 @use "./blocks/common/heading";
 @use "./blocks/common/title";
 @use "./blocks/common/subtitle";
+@use "./blocks/common/subheading";
 @use "./blocks/common/button";
 @use "./blocks/common/button-tab";
 @use "./blocks/common/type-tab-buttons";
@@ -28,6 +29,7 @@
 @use "./blocks/catalog/catalog-tab";
 @use "./blocks/catalog/product-preview-card";
 @use "./blocks/catalog/detail-card";
+@use "./blocks/delivery/delivery-tab";
 
 // -- sections
 @use "./blocks/common/header";
@@ -41,3 +43,4 @@
 @use "./blocks/common/footer";
 @use "./blocks/catalog/catalog";
 @use "./blocks/bottle-detail/detail";
+@use "./blocks/delivery/delivery";

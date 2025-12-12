@@ -148,36 +148,39 @@ const initAllTabs = () => {
     });
   };
 
-  const initCatalog = () => {
-    const catalog = document.body.querySelector("[data-js-catalog-tab-container]");
-    const tabButtonCollection = catalog?.querySelectorAll("[data-js-tab-button-wrapper] > [data-js-tab-button]");
-    const tabContentCollection = catalog?.querySelectorAll("[data-js-tab-content-wrapper] > [data-js-tab-content]");
+  const initTabs = () => {
+    const containerCollection = document.body.querySelectorAll("[data-js-tab-container]");
 
-    if (tabButtonCollection?.length < 1 || tabContentCollection?.length < 1) {
-      return;
-    }
+    containerCollection.forEach((container) => {
+      const tabButtonCollection = container?.querySelectorAll("[data-js-tab-button-wrapper] > [data-js-tab-button]");
+      const tabContentCollection = container?.querySelectorAll("[data-js-tab-content-wrapper] > [data-js-tab-content]");
 
-    tabButtonCollection?.forEach((button) => {
-      const id = button.dataset.jsTabButton;
+      if (tabButtonCollection?.length < 1 || tabContentCollection?.length < 1) {
+        return;
+      }
 
-      button.addEventListener("click", () => {
-        removeActiveClass(tabButtonCollection);
-        removeActiveClass(tabContentCollection);
+      tabButtonCollection?.forEach((button) => {
+        const id = button.dataset.jsTabButton;
 
-        tabContentCollection.forEach((content) => {
-          if (content.dataset.jsTabContent === id) {
-            activateItem(tabContentCollection, id);
-          }
+        button.addEventListener("click", () => {
+          removeActiveClass(tabButtonCollection);
+          removeActiveClass(tabContentCollection);
+
+          tabContentCollection.forEach((content) => {
+            if (content.dataset.jsTabContent === id) {
+              activateItem(tabContentCollection, id);
+            }
+          });
+
+          button.classList.add("is-active");
         });
-
-        button.classList.add("is-active");
       });
     });
   };
 
   initProductTypeChange();
   initCatalogPreview();
-  initCatalog();
+  initTabs();
 };
 
 const initAccordions = () => {
