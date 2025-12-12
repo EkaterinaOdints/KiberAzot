@@ -15,6 +15,7 @@
 @use "./blocks/common/slider-button";
 @use "./blocks/common/showmore-button";
 @use "./blocks/common/phone";
+@use "./blocks/common/back-link";
 @use "./blocks/common/review";
 
 // -- blocks
@@ -42,5 +43,5 @@
 @use "./blocks/common/faq";
 @use "./blocks/common/footer";
 @use "./blocks/catalog/catalog";
-@use "./blocks/bottle-detail/detail";
+@use "./blocks/detail/detail";
 @use "./blocks/delivery/delivery";

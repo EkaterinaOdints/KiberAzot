@@ -1,0 +1,28 @@
+@use "../../common/variables" as *;
+
+.back-link {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  color: $color-text-white;
+  margin-bottom: 40px;
+  font-size: 20px;
+  line-height: 100%;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &::before {
+    content: "";
+    display: block;
+    background-color: currentColor;
+    width: 14px;
+    height: 12px;
+    mask-image: url("../../img/arrow-back.svg");
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+
+  &:hover {
+    color: $color-accent-second;
+  }
+}
