@@ -51,6 +51,10 @@ body {
   }
 }
 
+main {
+  flex-grow: 1;
+}
+
 .overlay {
   overflow: hidden;
 
