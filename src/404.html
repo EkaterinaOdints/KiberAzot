@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <title>My project</title>
+    <link rel="preload" href="./fonts/Opsilon-Regular.woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/Opsilon-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Regular.woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Regular.woff2" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Bold.woff" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./fonts/VictorMono-Bold.woff2" as="font" crossorigin="anonymous" />
+    <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+    <link rel="shortcut icon" href="./favicon/favicon.ico" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+  </head>
+
+  <body>
+    <header class="header" data-js-header>
+      <div class="header__container container">
+        <div class="header__wrapper">
+          <a class="header__logo" href="index.html">
+            <img src="./img/logo.svg" width="145" height="35" alt="Логотип компании" />
+          </a>
+          <nav class="header__nav nav" data-js-menu>
+            <a class="nav__link button button--dark" href="catalog.html">Каталог</a>
+            <a class="nav__link button button--dark" href="#">О&nbsp;компании</a>
+            <a class="nav__link button button--dark" href="delivery.html">Доставка</a>
+            <a class="nav__link button button--dark" href="law.html">Закон</a>
+            <a class="nav__link button button--dark" href="wholesale.html">Опт</a>
+            <a class="nav__link button button--dark" href="contacts.html">Контакты</a>
+            <a class="nav__link button button--dark" href="#">Блог</a>
+          </nav>
+          <a class="header__phone phone" href="tel:+79654493111">
+            <div class="phone__icon">
+              <svg width="24" height="24">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <span class="phone__text">+7 965 449-31-11</span>
+          </a>
+          <button class="header__nav-button" type="button" data-js-menu-button>
+            <div class="header__nav-button-item"></div>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="error">
+        <div class="error__container">
+          <div class="error__wrapper">
+            <div class="error__image">
+              <picture>
+                <source srcset="./img/404/404-cat@1x.webp 1x, ./img/404/404-cat@2x.webp 2x" type="image/webp" width="473" height="655" />
+                <img src="./img/404/404-cat@1x.png" srcset="./img/404/404-cat@2x.png 2x" width="473" height="655" alt="Кот-кайфун" />
+              </picture>
+            </div>
+            <div class="error__text">
+              <p class="error__subtitle title">
+                <span class="error__subtitle-text">Упс! Мы всё проверили — такой страницы нет. Но зато есть куча других!</span>
+              </p>
+              <a class="error__button button button--light" href="index.html">Прыгнуть на главную</a>
+            </div>
+            <h1 class="error__title">404</h1>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer footer--dark">
+      <div class="footer__container container">
+        <div class="footer__wrapper">
+          <nav class="footer__nav nav" data-js-menu>
+            <a class="nav__link button" href="catalog.html">Каталог</a>
+            <a class="nav__link button" href="#">О&nbsp;компании</a>
+            <a class="nav__link button" href="#">Доставка</a>
+            <a class="nav__link button" href="#">Закон</a>
+            <a class="nav__link button" href="#">Опт</a>
+            <a class="nav__link button" href="#">Контакты</a>
+            <a class="nav__link button" href="#">Блог</a>
+          </nav>
+          <a class="footer__phone phone" href="tel:+79654493111">
+            <div class="phone__icon">
+              <svg width="24" height="24">
+                <use href="./img/sprite.svg#phone"></use>
+              </svg>
+            </div>
+            <span class="phone__text">+7 965 449-31-11</span>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
