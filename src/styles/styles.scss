@@ -17,6 +17,7 @@
 @use "./blocks/common/phone";
 @use "./blocks/common/back-link";
 @use "./blocks/common/review";
+@use "./blocks/common/blog-item";
 
 // -- blocks
 @use "./blocks/common/nav";
@@ -31,6 +32,9 @@
 @use "./blocks/catalog/product-preview-card";
 @use "./blocks/catalog/detail-card";
 @use "./blocks/delivery/delivery-tab";
+@use "./blocks/common/text-block";
+@use "./blocks/about/feature";
+@use "./blocks/blog-detail/blog-detail-card";
 
 // -- sections
 @use "./blocks/common/header";
@@ -39,7 +43,7 @@
 @use "./blocks/index/short-features";
 @use "./blocks/index/short-about";
 @use "./blocks/index/index-delivery";
-@use "./blocks/index/short-reviews";
+@use "./blocks/common/short-reviews";
 @use "./blocks/common/faq";
 @use "./blocks/common/footer";
 @use "./blocks/catalog/catalog";
@@ -49,3 +53,8 @@
 @use "./blocks/wholesale/wholesale";
 @use "./blocks/contacts/contacts";
 @use "./blocks/error/error";
+@use "./blocks/about/about";
+@use "./blocks/about/features";
+@use "./blocks/about/short-blog";
+@use "./blocks/blog/blog";
+@use "./blocks/blog-detail/blog-detail";

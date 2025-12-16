@@ -1,10 +1,10 @@
 @use "../../common/variables" as *;
 
-.wholesale {
-  padding: 43px 0 140px;
+.about {
+  padding: 43px 0 70px;
 
   &__title {
-    margin: 0 0 80px;
+    margin: 0 0 40px;
   }
 
   &__info {
@@ -13,16 +13,28 @@
     gap: 10px;
   }
 
+  &__text-block {
+    column-gap: 28px;
+  }
+
   &__image {
     width: 317px;
-    aspect-ratio: 317 / 251;
+    aspect-ratio: 317 / 332;
+  }
+
+  @media (max-width: 1240px) {
+    padding: 60px 0 80px;
   }
 
   @media (max-width: 1024px) {
-    padding: 85px 0 100px;
+    padding: 100px 0 60px;
 
     &__title {
-      margin: 0 0 40px;
+      margin: 0 0 30px;
+    }
+
+    &__text-block {
+      column-gap: 10px;
     }
 
     &__image {
@@ -32,34 +44,21 @@
   }
 
   @media (max-width: 768px) {
-    padding: 79px 0 100px;
-
-    &__title {
-      margin: 0 0 30px;
-    }
-
-    &__image {
-      max-width: 400px;
-      margin-bottom: -20px;
-      margin-top: 15px;
-    }
-  }
-
-  @media (max-width: 425px) {
-    padding: 79px 0 30px;
+    padding: 100px 0 40px;
 
     &__title {
       margin: 0 0 20px;
     }
 
-    &__info {
-      gap: 5px;
-    }
-
     &__image {
       max-width: 300px;
-      margin-bottom: -15px;
-      margin-top: 10px;
+      margin-top: 15px;
+    }
+  }
+
+  @media (max-width: 425px) {
+    &__info {
+      gap: 5px;
     }
   }
 }

@@ -26,10 +26,10 @@
           </a>
           <nav class="header__nav nav" data-js-menu>
             <a class="nav__link button button--dark" href="catalog.html">Каталог</a>
-            <a class="nav__link button button--dark" href="about.html">О&nbsp;компании</a>
+            <a class="nav__link button button--dark is-active">О&nbsp;компании</a>
             <a class="nav__link button button--dark" href="delivery.html">Доставка</a>
             <a class="nav__link button button--dark" href="law.html">Закон</a>
-            <a class="nav__link button button--dark is-active">Опт</a>
+            <a class="nav__link button button--dark" href="wholesale.html">Опт</a>
             <a class="nav__link button button--dark" href="contacts.html">Контакты</a>
             <a class="nav__link button button--dark" href="blog.html">Блог</a>
           </nav>
@@ -48,31 +48,23 @@
       </div>
     </header>
     <main>
-      <section class="wholesale">
-        <div class="wholesale__container container">
-          <div class="wholesale__wrapper">
-            <h1 class="wholesale__title heading">Опт</h1>
-            <div class="wholesale__info">
-              <div class="text-block">
-                <div class="text-block__text-wrapper">
-                  <h2 class="text-block__title subheading">Надёжный поставщик</h2>
-                  <div class="text-block__content content">
-                    <p>Мы работаем на рынке более 10 лет и гарантируем надёжность поставок как по Москве, так и по всей России. Для оптовых клиентов действуют специальные условия, о которых вы можете узнать у менеджера</p>
-                  </div>
-                </div>
-                <div class="wholesale__image text-block__image">
-                  <picture>
-                    <source srcset="./img/wholesale/wholesale-bottles@1x.webp 1x, ./img/wholesale/wholesale-bottles@2x.webp 2x" type="image/webp" width="317" height="251" />
-                    <img src="./img/wholesale/wholesale-bottles@1x.png" srcset="./img/wholesale/wholesale-bottles@2x.png 2x" width="317" height="251" alt="Баллоны" />
-                  </picture>
-                </div>
-              </div>
-              <div class="text-block">
+      <section class="about">
+        <div class="about__container container">
+          <div class="about__wrapper">
+            <h1 class="about__title heading">О&nbsp;компании</h1>
+            <div class="about__info">
+              <div class="about__text-block text-block">
                 <div class="text-block__wrapper">
-                  <h2 class="text-block__title subheading">Законность закиси азота в России</h2>
+                  <h2 class="text-block__title subheading">vozduh это</h2>
                   <div class="text-block__content content">
-                    <p>Владельцам ночных клубов, организаторам фестивалей и event-пространствам: закись азота купить оптом – это выгодное и перспективное решение. Веселящий газ (N₂O) завоевывает популярность как элемент современного досуга, предлагая гостям расслабление и позитивные эмоции. Его эффект кратковременен и не накапливается в организме, что делает его востребованным для создания особой атмосферы</p>
+                    <p>Наша компания занимается реализацией сертифицированной закиси азота в баллонах разной вместительности. Вся продукция изготавливается по ГОСТу и проходит проверку качества, что подтверждается соответствующими сертификатами. Для каждого покупателя организовывается оперативная доставка в удобное для него время. Перевозка заказов выполняется специальным транспортом, обеспечивающим целостность баллонов и сохранность их содержимого. Помимо продажи баллонного газа, мы предлагаем выгодный обмен пустых емкостей на заправленные с небольшой доплатой.</p>
                   </div>
+                </div>
+                <div class="about__image text-block__image">
+                  <picture>
+                    <source srcset="./img/about/about-cat@1x.webp 1x, ./img/about/about-cat@2x.webp 2x" type="image/webp" width="317" height="332" />
+                    <img src="./img/about/about-cat@1x.png" srcset="./img/about/about-cat@2x.png 2x" width="317" height="332" alt="Кот-кайфун" />
+                  </picture>
                 </div>
               </div>
               <div class="text-block">
@@ -99,65 +91,169 @@
                   </div>
                 </div>
               </div>
-              <div class="text-block">
-                <div class="text-block__wrapper">
-                  <!-- prettier-ignore -->
-                  <p class="text-block__text-highlighted wholesale__subtitle wholesale__subtitle--centered subheading">
-                  Веселящий газ оптом –
-                  <span class="highlight-additional">Идеальный формат для заведений</span>, 
-                  где&nbsp;он используется через портативные шарики, гармонично дополняя праздничную атмосферу. Мы обеспечиваем оперативную
-                  <span class="highlight-additional">доставку веселящего газа в Москве прямо к вашей точке</span>, независимо от района
-                </p>
-                  <button class="button button--light" type="button">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="features">
+        <div class="features__container container">
+          <div class="features__wrapper">
+            <h2 class="features__title title">Наши преимущества</h2>
+            <ul class="features__list">
+              <li class="features__item feature">
+                <div class="feature__text">
+                  <h3 class="feature__title subheading">Качество</h3>
+                  <p class="feature__description">Сделав заказ у нас, вы гарантированно получаете качественный продукт</p>
+                </div>
+                <div class="feature__icon">
+                  <svg width="42" height="42">
+                    <use href="./img/sprite.svg#fire"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="features__item feature">
+                <div class="feature__text">
+                  <h3 class="feature__title subheading">Удобство</h3>
+                  <p class="feature__description">В кратчайшие сроки курьеры доставят веселящий газ в любую точку Москвы</p>
+                </div>
+                <div class="feature__icon">
+                  <svg width="42" height="42">
+                    <use href="./img/sprite.svg#alarm"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="features__item feature">
+                <div class="feature__text">
+                  <h3 class="feature__title subheading">Сертифицированная продукция</h3>
+                  <p class="feature__description">Представленный на сайте товар прошел проверку, что подтверждается соответствующими сертификатами</p>
+                </div>
+                <div class="feature__icon">
+                  <svg width="42" height="42">
+                    <use href="./img/sprite.svg#check"></use>
+                  </svg>
+                </div>
+              </li>
+              <li class="features__item feature">
+                <div class="feature__text">
+                  <h3 class="feature__title subheading">Самые вкусные акции</h3>
+                  <p class="feature__description">Вы всегда можете заказать и недорого купить N2O по выгодным ценам</p>
+                </div>
+                <div class="feature__icon">
+                  <svg width="42" height="42">
+                    <use href="./img/sprite.svg#like"></use>
+                  </svg>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="short-reviews short-reviews--dark">
+        <div class="short-reviews__wrapper">
+          <div class="container">
+            <h2 class="short-reviews__title title">Отзывы</h2>
+          </div>
+          <div class="short-reviews__slider reviews-slider" data-js-short-reviews-swiper-container>
+            <div class="reviews-slider__container swiper" data-js-short-reviews-swiper>
+              <div class="reviews-slider__wrapper swiper-wrapper">
+                <div class="reviews-slider__item swiper-slide review">
+                  <div class="review__text">
+                    <p>Отличный сервис! Всё прошло быстро и без&nbsp;лишней суеты. Команда сработала профессионально, сразу ответили на вопросы и помогли разобраться с деталями. Особенно порадовало внимание к&nbsp;клиенту и аккуратность. Обязательно обращусь снова, спасибо за работу!</p>
+                  </div>
+                  <span class="review__date">11.11.25</span>
+                </div>
+                <div class="reviews-slider__item swiper-slide review">
+                  <div class="review__text">
+                    <p>Отличный сервис! Всё прошло быстро и без&nbsp;лишней суеты. Команда сработала профессионально, сразу ответили на вопросы и помогли разобраться с деталями. Особенно порадовало внимание к&nbsp;клиенту и аккуратность. Обязательно обращусь снова, спасибо за работу!</p>
+                  </div>
+                  <span class="review__date">11.11.25</span>
+                </div>
+                <div class="reviews-slider__item swiper-slide review">
+                  <div class="review__text">
+                    <p>Отличный сервис! Всё прошло быстро и без&nbsp;лишней суеты. Команда сработала профессионально, сразу ответили на вопросы и помогли разобраться с деталями. Особенно порадовало внимание к&nbsp;клиенту и аккуратность. Обязательно обращусь снова, спасибо за работу!</p>
+                  </div>
+                  <span class="review__date">11.11.25</span>
+                </div>
+                <div class="reviews-slider__item swiper-slide review">
+                  <div class="review__text">
+                    <p>Отличный сервис! Всё прошло быстро и без&nbsp;лишней суеты. Команда сработала профессионально, сразу ответили на вопросы и помогли разобраться с деталями. Особенно порадовало внимание к&nbsp;клиенту и аккуратность. Обязательно обращусь снова, спасибо за работу!</p>
+                  </div>
+                  <span class="review__date">11.11.25</span>
+                </div>
+                <div class="reviews-slider__item swiper-slide review">
+                  <div class="review__text">
+                    <p>Отличный сервис! Всё прошло быстро и без&nbsp;лишней суеты. Команда сработала профессионально, сразу ответили на вопросы и помогли разобраться с деталями. Особенно порадовало внимание к&nbsp;клиенту и аккуратность. Обязательно обращусь снова, спасибо за работу!</p>
+                  </div>
+                  <span class="review__date">11.11.25</span>
+                </div>
+                <div class="reviews-slider__item swiper-slide review">
+                  <div class="review__text">
+                    <p>Отличный сервис! Всё прошло быстро и без&nbsp;лишней суеты. Команда сработала профессионально, сразу ответили на вопросы и помогли разобраться с деталями. Особенно порадовало внимание к&nbsp;клиенту и аккуратность. Обязательно обращусь снова, спасибо за работу!</p>
+                  </div>
+                  <span class="review__date">11.11.25</span>
+                </div>
+                <div class="reviews-slider__item swiper-slide review">
+                  <div class="review__text">
+                    <p>Отличный сервис! Всё прошло быстро и без&nbsp;лишней суеты. Команда сработала профессионально, сразу ответили на вопросы и помогли разобраться с деталями. Особенно порадовало внимание к&nbsp;клиенту и аккуратность. Обязательно обращусь снова, спасибо за работу!</p>
+                  </div>
+                  <span class="review__date">11.11.25</span>
                 </div>
               </div>
-              <div class="text-block">
-                <div class="text-block__wrapper">
-                  <h2 class="text-block__title subheading">Особенности применения</h2>
-                  <div class="text-block__content content">
-                    <p>Использование пищевой закиси азота способствует возникновению чувства легкости и кратковременной эйфории (до 30-40 минут). После прекращения действия компоненты полностью выводятся из организма в течение 1-2 часов. Наш веселящий газ оптом проходит многоступенчатую очистку, что исключает неприятные ощущения (першение, сухость) и обеспечивает мягкий, слегка сладковатый вкус. Доступны варианты с ароматическими добавками</p>
-                  </div>
-                </div>
-              </div>
-              <div class="text-block">
-                <div class="text-block__wrapper">
-                  <h2 class="text-block__title subheading">Удобство заказа и доставки</h2>
-                  <div class="text-block__content content">
-                    <p>Закись азота оптом в Москве – это не только выгодная цена, но и комфортный сервис. Выбирайте нужный объем баллонов и оформляйте заказ на сайте. Мы обеспечиваем надежную веселящий газ доставка Москва по указанному адресу. Наши курьеры предоставят краткий инструктаж по использованию и организуют вывоз пустой тары для последующей перезаправки по оптовым условиям</p>
-                  </div>
-                </div>
-                <div class="wholesale__image text-block__image">
+            </div>
+            <div class="reviews-slider__button-wrapper">
+              <button class="reviews-slider__button slider-button slider-button--prev slider-button--light" type="button" data-js-short-reviews-swiper-button-prev></button>
+              <button class="reviews-slider__button slider-button slider-button--next slider-button--light" type="button" data-js-short-reviews-swiper-button-next></button>
+            </div>
+          </div>
+          <div class="container">
+            <a class="short-reviews__button showmore-button" href="#">Смотреть все</a>
+          </div>
+        </div>
+      </section>
+      <section class="short-blog">
+        <div class="short-blog__container container">
+          <div class="short-blog__wrapper">
+            <h2 class="short-blog__title title">Блог</h2>
+            <div class="short-blog__list">
+              <a class="short-blog__item blog-item" href="blog-detail.html">
+                <div class="blog-item__image">
                   <picture>
-                    <source srcset="./img/wholesale/wholesale-cat@1x.webp 1x, ./img/wholesale/wholesale-cat@2x.webp 2x" type="image/webp" width="317" height="251" />
-                    <img src="./img/wholesale/wholesale-cat@1x.png" srcset="./img/wholesale/wholesale-cat@2x.png 2x" width="317" height="251" alt="Кот-кайфун" />
+                    <source srcset="./img/blog/blog-1@1x.webp 1x, ./img/blog/blog-1@2x.webp 2x" type="image/webp" width="510" height="380" />
+                    <img src="./img/blog/blog-1@1x.png" srcset="./img/blog/blog-1@2x.png 2x" width="510" height="380" alt="Баллоны" />
                   </picture>
                 </div>
-                <div class="text-block__content text-block__content--additional content">
-                  <h3>Ключевые вопросы:</h3>
-                  <ul>
-                    <li>
-                      Что представляет собой закись азота?
-                      <br />
-                      Веселящий газ (N₂O) – бесцветное невзрывоопасное вещество со слабовыраженным вкусом/запахом. Поддерживает горение. Сфера применения зависит от степени очистки и концентрации
-                    </li>
-                    <li>
-                      Почему выгодно покупать веселящий газ оптом?
-                      <br />
-                      Закись азота купить оптом в Москве – это значительная экономия по сравнению с розницей при сохранении премиального качества продукта. Оптимальный запас гарантирует бесперебойную работу вашего заведения
-                    </li>
-                    <li>
-                      Где еще применяется N₂O?
-                      <br />
-                      Помимо индустрии развлечений, закись азота (пищевая добавка E942) используется:
-                      <ul>
-                        <li>В пищепроме как пропеллент (например, в взбитых сливках)и для продления срока хранения продуктов</li>
-                        <li>В медицине как анестетик (в иных концентрациях)</li>
-                        <li>В технических отраслях (ракетостроение) как окислитель и катализатор</li>
-                      </ul>
-                    </li>
-                  </ul>
+                <div class="blog-item__text">
+                  <span class="blog-item__date">11.11.25</span>
+                  <h3 class="blog-item__title">Круглосуточная доставка веселящего газа на дом в МО</h3>
                 </div>
-              </div>
+              </a>
+              <a class="short-blog__item blog-item" href="blog-detail.html">
+                <div class="blog-item__image">
+                  <picture>
+                    <source srcset="./img/blog/blog-2@1x.webp 1x, ./img/blog/blog-2@2x.webp 2x" type="image/webp" width="510" height="380" />
+                    <img src="./img/blog/blog-2@1x.png" srcset="./img/blog/blog-2@2x.png 2x" width="510" height="380" alt="Баллоны" />
+                  </picture>
+                </div>
+                <div class="blog-item__text">
+                  <span class="blog-item__date">11.11.25</span>
+                  <h3 class="blog-item__title">Меры предосторожности при использовании баллонов закиси азота</h3>
+                </div>
+              </a>
+              <a class="short-blog__item blog-item" href="blog-detail.html">
+                <div class="blog-item__image">
+                  <picture>
+                    <source srcset="./img/blog/blog-3@1x.webp 1x, ./img/blog/blog-3@2x.webp 2x" type="image/webp" width="510" height="380" />
+                    <img src="./img/blog/blog-3@1x.png" srcset="./img/blog/blog-3@2x.png 2x" width="510" height="380" alt="Баллоны" />
+                  </picture>
+                </div>
+                <div class="blog-item__text">
+                  <span class="blog-item__date">11.11.25</span>
+                  <h3 class="blog-item__title">Как организовать домашнюю вечеринку с веселящими шариками: идеи и советы</h3>
+                </div>
+              </a>
+              <a class="short-blog__item blog-item blog-item--showmore" href="#">
+                <h3 class="blog-item__caption title">Читать все новости</h3>
+              </a>
             </div>
           </div>
         </div>
