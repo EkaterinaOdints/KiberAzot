@@ -1,5 +1,4 @@
 import "./styles/styles.scss";
-import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs";
 
 const initMobileMenu = () => {
   const body = document.body;

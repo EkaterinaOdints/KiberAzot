@@ -5,11 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <title>My project</title>
-    <link rel="preload" href="./fonts/Opsilon-Regular.woff" as="font" crossorigin="anonymous" />
     <link rel="preload" href="./fonts/Opsilon-Regular.woff2" as="font" crossorigin="anonymous" />
-    <link rel="preload" href="./fonts/VictorMono-Regular.woff" as="font" crossorigin="anonymous" />
     <link rel="preload" href="./fonts/VictorMono-Regular.woff2" as="font" crossorigin="anonymous" />
-    <link rel="preload" href="./fonts/VictorMono-Bold.woff" as="font" crossorigin="anonymous" />
     <link rel="preload" href="./fonts/VictorMono-Bold.woff2" as="font" crossorigin="anonymous" />
     <link rel="icon" type="image/png" href="./favicon/favicon-96x96.png" sizes="96x96" />
     <link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
@@ -525,6 +522,26 @@
           </div>
         </div>
       </section>
+      <div class="modal">
+        <div class="modal__container container">
+          <div class="modal__wrapper">
+            <span class="modal__title title">Выберите способ заказа</span>
+            <button class="modal__button" type="button">
+              <span class="visually-hidden">Закрыть</span>
+            </button>
+            <div class="modal__content order-methods">
+              <div class="order-methods__item">
+                <span class="order-methods__item-title">Заказать по телефону</span>
+                <a class="order-methods__item-button" href="tel:+79654493111">+7 965 449-31-11</a>
+              </div>
+              <div class="order-methods__item">
+                <span class="order-methods__item-title">Заказать через Telegram-бота</span>
+                <a class="order-methods__item-button" href="tel:+79654493111">Открыть Telegram-бот</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <div class="footer__container container">
@@ -549,6 +566,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
