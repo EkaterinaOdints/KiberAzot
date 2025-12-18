@@ -4,7 +4,7 @@ import Swiper from "https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.mjs
 const initMobileMenu = () => {
   const body = document.body;
   const header = body.querySelector("[data-js-header]");
-  const menuButton = header.querySelector("[data-js-menu-button]");
+  const menuButton = header?.querySelector("[data-js-menu-button]");
 
   if (!header || !menuButton) {
     return;
@@ -213,6 +213,10 @@ const initSalesBannerSliders = () => {
   }
 
   salesSliderCollection?.forEach((slider) => {
+    if (!slider) {
+      return;
+    }
+
     const buttonPrev = slider.querySelector("[data-js-sales-banner-swiper-button-prev]");
     const buttonNext = slider.querySelector("[data-js-sales-banner-swiper-button-next]");
 
@@ -242,7 +246,11 @@ const initShortReviewsSliders = () => {
   }
 
   reviewsSliderContainerCollection?.forEach((sliderContainer) => {
-    const slider = document.body.querySelector("[data-js-short-reviews-swiper]");
+    if (!sliderContainer) {
+      return;
+    }
+
+    const slider = sliderContainer.querySelector("[data-js-short-reviews-swiper]");
     const buttonPrev = sliderContainer.querySelector("[data-js-short-reviews-swiper-button-prev]");
     const buttonNext = sliderContainer.querySelector("[data-js-short-reviews-swiper-button-next]");
 
@@ -308,27 +316,27 @@ const initTextCrop = () => {
     }
 
     const cropText = () => {
-      let symbolNumber = innerWidth <= 768 ? 188 : 436;
+      let symbolNumber = window.innerWidth <= 768 ? 188 : 436;
       return `${fullText.slice(0, symbolNumber)}...`;
     };
 
     let croppedText = cropText();
-    let isSwownFull = false;
+    let isShownFull = false;
 
     const hideFullText = () => {
       textWrapper.textContent = croppedText;
       button.textContent = "Просмотреть полностью";
-      isSwownFull = false;
+      isShownFull = false;
     };
 
     const showFullText = () => {
       textWrapper.textContent = fullText;
       button.textContent = "Скрыть";
-      isSwownFull = true;
+      isShownFull = true;
     };
 
     button.addEventListener("click", () => {
-      if (!isSwownFull) {
+      if (!isShownFull) {
         showFullText();
       } else {
         hideFullText();
