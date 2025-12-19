@@ -32,7 +32,7 @@
 @use "./blocks/catalog/detail-card";
 @use "./blocks/delivery/delivery-tab";
 @use "./blocks/common/text-block";
-@use "./blocks/about/feature";
+@use "./blocks/common/feature";
 @use "./blocks/blog-detail/blog-detail-card";
 @use "./blocks/common/order-methods";
 
@@ -55,7 +55,7 @@
 @use "./blocks/contacts/contacts";
 @use "./blocks/error/error";
 @use "./blocks/about/about";
-@use "./blocks/about/features";
+@use "./blocks/common/features";
 @use "./blocks/about/short-blog";
 @use "./blocks/blog/blog";
 @use "./blocks/blog-detail/blog-detail";
