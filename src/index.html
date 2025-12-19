@@ -233,7 +233,7 @@
                     </div>
                   </div>
                 </div>
-                <button class="catalog-preview__button button button--light" type="button">Заказать</button>
+                <button class="catalog-preview__button button button--light" type="button" data-js-modal-order-button>Заказать</button>
               </div>
             </div>
           </div>
@@ -513,7 +513,7 @@
             </div>
             <div class="faq__banner brand-banner">
               <div class="brand-banner__wrapper">
-                <button class="brand-banner__button button button--dark" type="button">Заказать веселящий газ</button>
+                <button class="brand-banner__button button button--dark" type="button" data-js-modal-order-button>Заказать веселящий газ</button>
                 <div class="brand-banner__logo">
                   <img src="./img/logo.svg" width="690" height="167" alt="Логотип компании" />
                 </div>
@@ -522,21 +522,21 @@
           </div>
         </div>
       </section>
-      <div class="modal">
+      <div class="modal" data-js-modal-order>
         <div class="modal__container container">
-          <div class="modal__wrapper">
+          <div class="modal__wrapper" data-js-modal-inner>
             <span class="modal__title title">Выберите способ заказа</span>
-            <button class="modal__button" type="button">
+            <button class="modal__button" type="button" data-js-modal-button-close>
               <span class="visually-hidden">Закрыть</span>
             </button>
             <div class="modal__content order-methods">
               <div class="order-methods__item">
-                <span class="order-methods__item-title">Заказать по телефону</span>
-                <a class="order-methods__item-button" href="tel:+79654493111">+7 965 449-31-11</a>
+                <span class="order-methods__item-title subheading">Заказать по&nbsp;телефону</span>
+                <a class="order-methods__item-button button button--small" href="tel:+79654493111">+7 965 449-31-11</a>
               </div>
               <div class="order-methods__item">
-                <span class="order-methods__item-title">Заказать через Telegram-бота</span>
-                <a class="order-methods__item-button" href="tel:+79654493111">Открыть Telegram-бот</a>
+                <span class="order-methods__item-title subheading">Заказать через Telegram&#8209;бота</span>
+                <a class="order-methods__item-button button button--small" href="https://t.me/VozduhShop1Bot" target="_blank" rel="noopener noreferrer">Открыть Telegram-бот</a>
               </div>
             </div>
           </div>

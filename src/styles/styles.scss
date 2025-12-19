@@ -34,8 +34,10 @@
 @use "./blocks/common/text-block";
 @use "./blocks/about/feature";
 @use "./blocks/blog-detail/blog-detail-card";
+@use "./blocks/common/order-methods";
 
 // -- sections
+@use "./blocks/common/modal";
 @use "./blocks/common/header";
 @use "./blocks/index/hero";
 @use "./blocks/index/short-catalog";

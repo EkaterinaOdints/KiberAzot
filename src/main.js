@@ -1,5 +1,51 @@
 import "./styles/styles.scss";
 
+const initModalOrder = () => {
+  const body = document.body;
+  const modal = document.querySelector("[data-js-modal-order]");
+  const modalInner = modal?.querySelector("[data-js-modal-inner]");
+  const modalCloseButton = modal?.querySelector("[data-js-modal-button-close]");
+  const buttonCollection = document.querySelectorAll("[data-js-modal-order-button]");
+
+  const closeModal = () => {
+    body.classList.remove("modal-overlay");
+    modal.classList.remove("is-modal-opened");
+
+    modalCloseButton.removeEventListener("click", closeModal);
+    modal.removeEventListener("click", onModalOutsideClick);
+    document.removeEventListener("keydown", onEscapeClick);
+  };
+
+  const openModal = () => {
+    body.classList.add("modal-overlay");
+    modal.classList.add("is-modal-opened");
+
+    modalCloseButton.addEventListener("click", closeModal);
+    modal.addEventListener("click", onModalOutsideClick);
+    document.addEventListener("keydown", onEscapeClick);
+  };
+
+  function onModalOutsideClick(evt) {
+    if (evt.composedPath().includes(modalInner)) {
+      return null;
+    } else {
+      closeModal();
+    }
+  }
+
+  function onEscapeClick(evt) {
+    if (evt.code === "Escape") {
+      closeModal();
+    }
+  }
+
+  buttonCollection.forEach((button) => {
+    button.addEventListener("click", () => {
+      openModal();
+    });
+  });
+};
+
 const initMobileMenu = () => {
   const body = document.body;
   const header = body.querySelector("[data-js-header]");
@@ -15,13 +61,33 @@ const initMobileMenu = () => {
     header.classList.add("is-menu-opened");
     body.classList.add("overlay");
     isMenuOpened = true;
+
+    body.addEventListener("click", onMenuOutsideClick);
+    document.addEventListener("keydown", onEscapeClick);
   };
 
   const closeMenu = () => {
     header.classList.remove("is-menu-opened");
     body.classList.remove("overlay");
     isMenuOpened = false;
+
+    body.removeEventListener("click", onMenuOutsideClick);
+    document.removeEventListener("keydown", onEscapeClick);
   };
+
+  function onMenuOutsideClick(evt) {
+    if (evt.composedPath().includes(header)) {
+      return null;
+    } else {
+      closeMenu();
+    }
+  }
+
+  function onEscapeClick(evt) {
+    if (evt.code === "Escape") {
+      closeMenu();
+    }
+  }
 
   menuButton.addEventListener("click", () => {
     if (isMenuOpened) {
@@ -351,6 +417,7 @@ const initTextCrop = () => {
   });
 };
 
+initModalOrder();
 initMobileMenu();
 initAllTabs();
 initAccordions();
