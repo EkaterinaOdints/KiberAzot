@@ -38,6 +38,7 @@
       mask-repeat: no-repeat;
       mask-position: center;
       mask-size: contain;
+      transition: transform 0.3s;
     }
 
     &:hover {
@@ -67,7 +68,6 @@
   &__item-button.is-active {
     &::after {
       transform: rotate(45deg);
-      transition: transform 0.3s;
     }
   }
 
