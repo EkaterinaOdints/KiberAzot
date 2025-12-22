@@ -7,6 +7,10 @@ const initModalOrder = () => {
   const modalCloseButton = modal?.querySelector("[data-js-modal-button-close]");
   const buttonCollection = document.querySelectorAll("[data-js-modal-order-button]");
 
+  if (!modal || !modalInner || !modalCloseButton) {
+    return;
+  }
+
   const closeModal = () => {
     body.classList.remove("modal-overlay");
     modal.classList.remove("is-modal-opened");
@@ -60,6 +64,9 @@ const initMobileMenu = () => {
   const openMenu = () => {
     header.classList.add("is-menu-opened");
     body.classList.add("overlay");
+
+    menuButton.setAttribute("aria-label", "Закрыть меню");
+
     isMenuOpened = true;
 
     body.addEventListener("click", onMenuOutsideClick);
@@ -69,6 +76,9 @@ const initMobileMenu = () => {
   const closeMenu = () => {
     header.classList.remove("is-menu-opened");
     body.classList.remove("overlay");
+
+    menuButton.setAttribute("aria-label", "Открыть меню");
+
     isMenuOpened = false;
 
     body.removeEventListener("click", onMenuOutsideClick);
@@ -262,9 +272,26 @@ const initAccordions = () => {
       const button = item.querySelector("[data-js-accordion-item-button]");
       const text = item.querySelector("[data-js-accordion-item-text]");
 
+      let isActive = false;
+
+      const openAccordion = () => {
+        text.style.maxHeight = text.scrollHeight + "px";
+        button?.classList.add("is-active");
+        isActive = true;
+      };
+
+      const closeAccordion = () => {
+        text.style.maxHeight = 0;
+        button?.classList.remove("is-active");
+        isActive = false;
+      };
+
       button.addEventListener("click", () => {
-        text?.classList.toggle("is-active");
-        button?.classList.toggle("is-active");
+        if (isActive) {
+          closeAccordion();
+        } else {
+          openAccordion();
+        }
       });
     });
   });

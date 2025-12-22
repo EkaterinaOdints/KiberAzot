@@ -53,6 +53,7 @@
   &__item-text {
     max-height: 0;
     overflow: hidden;
+    transition: max-height 0.3s;
   }
 
   &__item-text-content {
@@ -61,11 +62,6 @@
     p {
       margin: 0;
     }
-  }
-
-  &__item-text.is-active {
-    max-height: 2000px;
-    transition: max-height 1s;
   }
 
   &__item-button.is-active {
