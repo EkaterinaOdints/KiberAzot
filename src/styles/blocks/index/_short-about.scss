@@ -114,24 +114,20 @@
     }
   }
 
-  &__text-content {
-    margin-bottom: 9px;
-    width: 510px;
-  }
-
   &__text {
     grid-area: text;
     align-self: start;
     margin-top: 42px;
     margin-bottom: 73px;
+    font-size: 18px;
+    font-weight: 400;
     letter-spacing: 1px;
     color: $color-text-white;
-    font-weight: 700;
+    width: 510px;
+  }
 
-    p {
-      margin: 0;
-      overflow: hidden;
-    }
+  &__text-content {
+    margin-bottom: 9px;
   }
 
   @media (max-width: 1240px) {
@@ -253,12 +249,9 @@
     }
 
     &__text {
+      font-size: 16px;
       margin-left: 20px;
       margin-top: 20px;
-      font-weight: 400;
-    }
-
-    &__text-content {
       width: 300px;
     }
 
@@ -337,10 +330,6 @@
     &__text {
       margin: 0;
       padding: 0 10px;
-    }
-
-    &__text-content {
-      width: 260px;
     }
   }
 }

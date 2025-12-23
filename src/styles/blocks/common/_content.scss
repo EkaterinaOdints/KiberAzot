@@ -7,8 +7,6 @@
 
   p {
     margin: 0;
-    font-size: 20px;
-    line-height: 140%;
     font-weight: 700;
     letter-spacing: -0.1px;
   }
@@ -49,10 +47,8 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 135%;
     letter-spacing: -0.1px;
+    font-weight: 700;
   }
 
   ul {
@@ -118,10 +114,6 @@
   @media (max-width: 1024px) {
     gap: 16px;
 
-    p {
-      font-size: 18px;
-    }
-
     h2 {
       font-size: 24px;
     }
@@ -140,16 +132,11 @@
     ul,
     ol {
       gap: 20px;
-      font-size: 18px;
     }
   }
 
   @media (max-width: 768px) {
     gap: 10px;
-
-    p {
-      font-size: 16px;
-    }
 
     h2 {
       font-size: 22px;
@@ -170,7 +157,6 @@
     ul,
     ol {
       gap: 15px;
-      font-size: 16px;
     }
 
     ul {

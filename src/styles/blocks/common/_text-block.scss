@@ -21,6 +21,22 @@
     gap: 24px;
   }
 
+  &__wrapper--centered {
+    align-items: center;
+    text-align: center;
+  }
+
+  &__content {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: -0.1px;
+  }
+
+  &__content--additional {
+    grid-area: add;
+    margin-top: 30px;
+  }
+
   &__title {
     margin: 0;
   }
@@ -71,20 +87,21 @@
   }
 
   &__attention-text {
-    font-size: 22px;
-    line-height: 150%;
+    font-size: 26px;
+    line-height: 140%;
     font-weight: 700;
-    max-width: 776px;
+    max-width: 890px;
     margin: 0;
   }
 
   &__text-highlighted {
     max-width: 872px;
+    margin: 0;
   }
 
-  &__content--additional {
-    grid-area: add;
-    margin-top: 30px;
+  &__button {
+    width: 100%;
+    max-width: 360px;
   }
 
   @media (max-width: 1024px) {
@@ -179,6 +196,10 @@
 
     &__content--additional {
       margin-top: 5px;
+    }
+
+    &__text-highlighted {
+      font-size: 20px;
     }
   }
 }

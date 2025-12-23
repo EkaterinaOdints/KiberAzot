@@ -58,11 +58,9 @@
   }
 
   &__item-text-content {
+    margin: 0;
     padding: 24px 32px 0;
-
-    p {
-      margin: 0;
-    }
+    font-weight: 700;
   }
 
   &__item-button.is-active {

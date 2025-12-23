@@ -12,8 +12,13 @@
     position: relative;
   }
 
+  &__slider-wrapper {
+    align-items: stretch;
+  }
+
   &__slider-item {
     position: relative;
+    height: auto;
     display: flex;
     justify-content: space-between;
     border-radius: 60px;

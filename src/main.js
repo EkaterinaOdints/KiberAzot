@@ -7,7 +7,7 @@ const initModalOrder = () => {
   const modalCloseButton = modal?.querySelector("[data-js-modal-button-close]");
   const buttonCollection = document.querySelectorAll("[data-js-modal-order-button]");
 
-  if (!modal || !modalInner || !modalCloseButton) {
+  if (!modal || !modalInner || !modalCloseButton || !buttonCollection?.length) {
     return;
   }
 
@@ -44,9 +44,7 @@ const initModalOrder = () => {
   }
 
   buttonCollection.forEach((button) => {
-    button.addEventListener("click", () => {
-      openModal();
-    });
+    button.addEventListener("click", openModal);
   });
 };
 
@@ -132,7 +130,7 @@ const initAllTabs = () => {
   const initProductTypeChange = () => {
     const productCollection = document.body.querySelectorAll("[data-js-product-typed]");
 
-    if (productCollection?.length < 1) {
+    if (!productCollection?.length) {
       return;
     }
 
@@ -169,7 +167,7 @@ const initAllTabs = () => {
     const tabContentCollection = catalog?.querySelectorAll("[data-js-tab-content-price]");
     const tabProductCollection = catalog?.querySelectorAll("[data-js-tab-content-product]");
 
-    if (tabButtonCollection?.length < 1 || tabContentCollection?.length < 1 || tabProductCollection?.length < 1) {
+    if (!tabButtonCollection?.length || !tabContentCollection?.length || !tabProductCollection?.length) {
       return;
     }
 
@@ -230,7 +228,7 @@ const initAllTabs = () => {
       const tabButtonCollection = container?.querySelectorAll("[data-js-tab-button-wrapper] > [data-js-tab-button]");
       const tabContentCollection = container?.querySelectorAll("[data-js-tab-content-wrapper] > [data-js-tab-content]");
 
-      if (tabButtonCollection?.length < 1 || tabContentCollection?.length < 1) {
+      if (!tabButtonCollection?.length || !tabContentCollection?.length) {
         return;
       }
 
@@ -261,7 +259,7 @@ const initAllTabs = () => {
 const initAccordions = () => {
   const accordionCollection = document.body.querySelectorAll("[data-js-accordion]");
 
-  if (accordionCollection?.length < 1) {
+  if (!accordionCollection?.length) {
     return;
   }
 
@@ -300,7 +298,7 @@ const initAccordions = () => {
 const initSalesBannerSliders = () => {
   const salesSliderCollection = document.body.querySelectorAll("[data-js-sales-banner-swiper]");
 
-  if (salesSliderCollection?.length < 1) {
+  if (!salesSliderCollection?.length) {
     return;
   }
 
@@ -312,7 +310,7 @@ const initSalesBannerSliders = () => {
     const buttonPrev = slider.querySelector("[data-js-sales-banner-swiper-button-prev]");
     const buttonNext = slider.querySelector("[data-js-sales-banner-swiper-button-next]");
 
-    const swiper = new Swiper(slider, {
+    new Swiper(slider, {
       loop: true,
       spaceBetween: 5,
 
@@ -333,7 +331,7 @@ const initSalesBannerSliders = () => {
 const initShortReviewsSliders = () => {
   const reviewsSliderContainerCollection = document.body.querySelectorAll("[data-js-short-reviews-swiper-container]");
 
-  if (reviewsSliderContainerCollection?.length < 1) {
+  if (!reviewsSliderContainerCollection?.length) {
     return;
   }
 
@@ -346,7 +344,7 @@ const initShortReviewsSliders = () => {
     const buttonPrev = sliderContainer.querySelector("[data-js-short-reviews-swiper-button-prev]");
     const buttonNext = sliderContainer.querySelector("[data-js-short-reviews-swiper-button-next]");
 
-    const swiper = new Swiper(slider, {
+    new Swiper(slider, {
       spaceBetween: 30,
       slidesPerView: 1,
       slidesOffsetBefore: 10,
@@ -393,14 +391,13 @@ const initShortReviewsSliders = () => {
 const initTextCrop = () => {
   const textContainerCollection = document.body.querySelectorAll("[data-js-text-crop-container]");
 
-  if (textContainerCollection?.length < 1) {
+  if (!textContainerCollection?.length) {
     return;
   }
 
   textContainerCollection?.forEach((textContainer) => {
-    const wrapper = textContainer.querySelector("[data-js-text-crop]");
-    const textWrapper = wrapper?.querySelector("p");
-    const button = textContainer.querySelector("[data-js-text-crop-button]");
+    const textWrapper = textContainer?.querySelector("[data-js-text-crop]");
+    const button = textContainer?.querySelector("[data-js-text-crop-button]");
     const fullText = textWrapper?.textContent;
 
     if (!textWrapper || !button || !fullText) {
@@ -408,7 +405,7 @@ const initTextCrop = () => {
     }
 
     const cropText = () => {
-      let symbolNumber = window.innerWidth <= 768 ? 188 : 436;
+      let symbolNumber = window.innerWidth <= 768 ? 173 : 436;
       return `${fullText.slice(0, symbolNumber)}...`;
     };
 
