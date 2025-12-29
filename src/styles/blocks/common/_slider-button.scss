@@ -5,6 +5,7 @@
   width: 46px;
   height: 46px;
   background-color: transparent;
+  color: inherit;
   border: none;
   padding: 0;
   cursor: pointer;
@@ -44,12 +45,4 @@
 
 .slider-button--next {
   transform: scale(-1, 1);
-}
-
-.slider-button--dark {
-  color: $color-default-black;
-}
-
-.slider-button--light {
-  color: $color-default-white;
 }
